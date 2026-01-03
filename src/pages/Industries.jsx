@@ -1,0 +1,42 @@
+import {motion} from 'framer-motion'
+import Seo from '../seo/Seo'
+import Container from '../components/layout/Container'
+import SectionHeader from '../components/ui/SectionHeader'
+import {industriesContent} from '../data/content'
+
+export default function Industries() {
+  return (
+    <>
+      <Seo
+        title="Industries We Serve - Kostitch"
+        description="We serve fashion brands, corporate uniforms, athleisure, children's wear, private label, and promotional apparel industries."
+      />
+      <section className="pt-32 pb-20">
+        <Container>
+          <SectionHeader
+            title="Industries We Serve"
+            subtitle="Expert manufacturing solutions across diverse apparel markets"
+          />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {industriesContent.map((industry, index) => (
+              <motion.div
+                key={index}
+                initial={{opacity: 0, y: 20}}
+                whileInView={{opacity: 1, y: 0}}
+                viewport={{once: true}}
+                transition={{delay: index * 0.1, duration: 0.5}}
+                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-primary-500 hover:shadow-lg transition-all"
+              >
+                <div className="bg-gray-200 rounded-lg aspect-video mb-4 flex items-center justify-center">
+                  <span className="text-gray-400 text-sm">Industry Image</span>
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-3">{industry.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{industry.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
+  )
+}
