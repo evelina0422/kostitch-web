@@ -7,7 +7,6 @@ import {siteConfig} from '../../data/siteConfig'
 import logo from '../../assets/logo.svg'
 
 const navLinks = [
-  {path: '/', label: 'Home'},
   {path: '/capabilities', label: 'Capabilities'},
   {path: '/industries', label: 'Industries'},
   {path: '/portfolio', label: 'Portfolio'},
