@@ -11,7 +11,7 @@ export default function Process() {
         title="Our Manufacturing Process - Kostitch"
         description="Learn about our streamlined manufacturing process from inquiry to delivery, ensuring quality and efficiency at every step."
       />
-      <section className="pt-32 pb-20">
+      <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
             title="Our Manufacturing Process"
@@ -30,15 +30,15 @@ export default function Process() {
                 }`}
               >
                 <div className="flex-1">
-                  <div className="inline-block bg-primary-600 text-white text-sm font-bold px-4 py-2 rounded-lg mb-4">
+                  <div className="inline-block bg-accent text-text-on-dark text-sm font-bold px-4 py-2 rounded-lg mb-4">
                     {step.number}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">{step.title}</h3>
-                  <p className="text-lg text-gray-600 leading-relaxed">{step.description}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-text-on-light mb-4">{step.title}</h3>
+                  <p className="text-lg text-text-on-light/70 leading-relaxed">{step.description}</p>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-gray-200 rounded-lg aspect-video flex items-center justify-center">
-                    <span className="text-gray-400">Process Step Visual</span>
+                  <div className="bg-border-line rounded-lg aspect-video flex items-center justify-center">
+                    <span className="text-text-on-light/50">Process Step Visual</span>
                   </div>
                 </div>
               </motion.div>

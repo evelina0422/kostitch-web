@@ -11,7 +11,7 @@ export default function Capabilities() {
         title="Our Capabilities - Kostitch"
         description="Comprehensive garment manufacturing capabilities including cut & sew, pattern making, sampling, bulk production, screen printing, embroidery, and more."
       />
-      <section className="pt-32 pb-20">
+      <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
             title="Our Manufacturing Capabilities"
@@ -25,10 +25,10 @@ export default function Capabilities() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.05, duration: 0.5}}
-                className="bg-white p-8 rounded-lg border border-gray-200 hover:border-primary-500 hover:shadow-lg transition-all"
+                className="bg-white p-8 rounded-lg border border-border-line hover:border-accent hover:shadow-lg transition-all"
               >
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{capability}</h3>
-                <p className="text-gray-600">
+                <h3 className="text-xl font-bold text-text-on-light mb-3">{capability}</h3>
+                <p className="text-text-on-light/70">
                   Professional {capability.toLowerCase()} services with attention to detail and quality standards.
                 </p>
               </motion.div>

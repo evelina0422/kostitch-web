@@ -19,7 +19,7 @@ export default function Portfolio() {
         title="Our Portfolio - Kostitch"
         description="Explore our portfolio of successful garment manufacturing projects across fashion, uniforms, athleisure, and more."
       />
-      <section className="pt-32 pb-20">
+      <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
             title="Our Portfolio"
@@ -33,14 +33,14 @@ export default function Portfolio() {
                 whileInView={{opacity: 1, scale: 1}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.1, duration: 0.5}}
-                className="bg-white rounded-lg overflow-hidden border border-gray-200 hover:shadow-lg transition-all"
+                className="bg-white rounded-lg overflow-hidden border border-border-line hover:shadow-lg transition-all"
               >
-                <div className="bg-gray-200 aspect-[4/3] flex items-center justify-center">
-                  <span className="text-gray-400">Project Image Placeholder</span>
+                <div className="bg-border-line aspect-[4/3] flex items-center justify-center">
+                  <span className="text-text-on-light/50">Project Image Placeholder</span>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.category}</h3>
-                  <p className="text-gray-600">{item.description}</p>
+                  <h3 className="text-xl font-bold text-text-on-light mb-2">{item.category}</h3>
+                  <p className="text-text-on-light/70">{item.description}</p>
                 </div>
               </motion.div>
             ))}

@@ -18,10 +18,10 @@ export default function HomeProcess() {
               transition={{delay: index * 0.1, duration: 0.5}}
               className="relative"
             >
-              <div className="bg-primary-50 rounded-lg p-6 h-full border-l-4 border-primary-600">
-                <div className="text-primary-600 font-bold text-sm mb-2">{step.number}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              <div className="bg-light rounded-lg p-6 h-full border-l-4 border-accent">
+                <div className="text-accent font-bold text-sm mb-2">{step.number}</div>
+                <h3 className="text-xl font-bold text-text-on-light mb-3">{step.title}</h3>
+                <p className="text-text-on-light/70 leading-relaxed">{step.description}</p>
               </div>
             </motion.div>
           ))}

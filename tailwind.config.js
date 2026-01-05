@@ -7,17 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Brand theme colors
+        dark: '#0F0F10', // Primary background (dark/charcoal)
+        light: '#F5F5F5', // Light surface/background
+        'text-on-dark': '#FFFFFF', // Primary text on dark
+        'text-on-light': '#1F1F1F', // Primary text on light
+        'border-line': '#E0E0E0', // Border/line
+        accent: {
+          DEFAULT: '#D32F2F', // Brand accent red
+          hover: '#B71C1C', // Brand accent red hover
+        },
+        // Legacy primary mapping for backward compatibility during transition
         primary: {
-          50: '#f0f9ff',
-          100: '#e0f2fe',
-          200: '#bae6fd',
-          300: '#7dd3fc',
-          400: '#38bdf8',
-          500: '#0ea5e9',
-          600: '#0284c7',
-          700: '#0369a1',
-          800: '#075985',
-          900: '#0c4a6e',
+          50: '#F5F5F5', // Light surface
+          100: '#E0E0E0', // Border line
+          600: '#D32F2F', // Brand accent red
+          700: '#B71C1C', // Brand accent red hover
         },
       },
     },

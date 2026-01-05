@@ -19,13 +19,13 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-dark text-text-on-dark">
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div>
             <h3 className="text-white text-xl font-bold mb-4">{siteConfig.companyName}</h3>
-            <p className="text-gray-400 mb-4">{siteConfig.tagline}</p>
+            <p className="text-text-on-dark/80 mb-4">{siteConfig.tagline}</p>
             <div className="space-y-2 text-sm">
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mt-1 mr-2 flex-shrink-0" />
@@ -84,7 +84,7 @@ export default function Footer() {
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-lg hover:border-primary-500 hover:text-primary-500 transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -93,7 +93,7 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-lg hover:border-primary-500 hover:text-primary-500 transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -102,21 +102,21 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-gray-700 rounded-lg hover:border-primary-500 hover:text-primary-500 transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
               </a>
             </div>
             <Link to="/contact">
-              <button className="w-full bg-primary-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-primary-700 transition-colors">
+              <button className="w-full bg-accent text-text-on-dark py-2 px-4 rounded-lg font-semibold hover:bg-accent-hover transition-colors">
                 Request a Quote
               </button>
             </Link>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 text-center text-sm text-gray-400">
+        <div className="border-t border-border-line/30 mt-12 pt-8 text-center text-sm text-text-on-dark/70">
           <p>&copy; {new Date().getFullYear()} {siteConfig.companyName}. All rights reserved.</p>
         </div>
       </div>

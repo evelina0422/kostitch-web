@@ -6,7 +6,7 @@ import Container from '../layout/Container'
 
 export default function HomeCTA() {
   return (
-    <section className="py-20 bg-primary-600">
+    <section className="py-20 bg-accent">
       <Container>
         <motion.div
           initial={{opacity: 0, y: 20}}
@@ -15,21 +15,21 @@ export default function HomeCTA() {
           transition={{duration: 0.6}}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-dark mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-text-on-dark/90 mb-8 max-w-2xl mx-auto">
             Get a custom quote tailored to your needs. Our team is ready to bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-primary-600 hover:bg-gray-100">
+              <Button size="lg" variant="secondary" className="bg-white text-accent hover:bg-gray-100">
                 Request a Quote
                 <ArrowRight className="inline-block ml-2" size={20} />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-text-on-dark text-text-on-dark hover:bg-white/10">
                 Book a Call
               </Button>
             </Link>

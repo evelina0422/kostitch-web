@@ -16,10 +16,10 @@ export default function HomeWhyUs() {
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{delay: index * 0.1, duration: 0.5}}
-              className="p-6 rounded-lg border border-gray-200 hover:border-primary-300 hover:shadow-lg transition-all"
+              className="p-6 rounded-lg border border-border-line hover:border-accent hover:shadow-lg transition-all"
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{item.description}</p>
+              <h3 className="text-xl font-bold text-text-on-light mb-3">{item.title}</h3>
+              <p className="text-text-on-light/70 leading-relaxed">{item.description}</p>
             </motion.div>
           ))}
         </div>

@@ -11,9 +11,9 @@ export default function Textarea({
   return (
     <div className={`w-full ${className}`}>
       {label && (
-        <label htmlFor={name} className="block text-sm font-medium text-gray-700 mb-1">
+        <label htmlFor={name} className="block text-sm font-medium text-text-on-light mb-1">
           {label}
-          {required && <span className="text-red-500 ml-1">*</span>}
+          {required && <span className="text-accent ml-1">*</span>}
         </label>
       )}
       <textarea
@@ -22,8 +22,8 @@ export default function Textarea({
         placeholder={placeholder}
         rows={rows}
         {...register(name, {required: required ? `${label || name} is required` : false})}
-        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-none ${
-          error ? 'border-red-500' : 'border-gray-300'
+        className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none ${
+          error ? 'border-accent' : 'border-border-line'
         }`}
       />
       {error && <p className="mt-1 text-sm text-red-600">{error.message}</p>}

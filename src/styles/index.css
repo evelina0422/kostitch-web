@@ -3,12 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Brand theme variables */
+    --color-dark: #0F0F10;
+    --color-light: #F5F5F5;
+    --color-text-on-dark: #FFFFFF;
+    --color-text-on-light: #1F1F1F;
+    --color-border-line: #E0E0E0;
+    --color-accent: #D32F2F;
+    --color-accent-hover: #B71C1C;
+  }
+
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply text-gray-900 antialiased;
+    color: var(--color-text-on-light);
+    @apply antialiased;
+    background-color: var(--color-light);
   }
 }
 

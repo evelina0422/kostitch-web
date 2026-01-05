@@ -27,7 +27,7 @@ export default function Contact() {
         title="Contact Us - Kostitch"
         description="Get in touch with Kostitch for garment manufacturing quotes, consultations, and project inquiries. Request a quote or book a call today."
       />
-      <section className="pt-32 pb-20">
+      <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
             title="Get in Touch"
@@ -37,33 +37,33 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <div className="bg-gray-50 rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+              <div className="bg-light rounded-lg p-8 mb-8">
+                <h3 className="text-2xl font-bold text-text-on-light mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900 mb-1">Address</div>
-                      <div className="text-gray-600">
+                      <div className="font-semibold text-text-on-light mb-1">Address</div>
+                      <div className="text-text-on-light/70">
                         {siteConfig.address.street}<br />
                         {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900 mb-1">Phone</div>
-                      <a href={`tel:${siteConfig.phone}`} className="text-gray-600 hover:text-primary-600 transition-colors">
+                      <div className="font-semibold text-text-on-light mb-1">Phone</div>
+                      <a href={`tel:${siteConfig.phone}`} className="text-text-on-light/70 hover:text-accent transition-colors">
                         {siteConfig.phone}
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-gray-900 mb-1">Email</div>
-                      <a href={`mailto:${siteConfig.email}`} className="text-gray-600 hover:text-primary-600 transition-colors">
+                      <div className="font-semibold text-text-on-light mb-1">Email</div>
+                      <a href={`mailto:${siteConfig.email}`} className="text-text-on-light/70 hover:text-accent transition-colors">
                         {siteConfig.email}
                       </a>
                     </div>
@@ -71,9 +71,9 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-primary-50 rounded-lg p-8">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Business Hours</h3>
-                <div className="space-y-2 text-gray-700">
+              <div className="bg-light rounded-lg p-8">
+                <h3 className="text-xl font-bold text-text-on-light mb-4">Business Hours</h3>
+                <div className="space-y-2 text-text-on-light">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
                     <span className="font-semibold">9:00 AM - 6:00 PM</span>
@@ -99,14 +99,14 @@ export default function Contact() {
                   className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
-                  <p className="text-gray-600">
+                  <h3 className="text-2xl font-bold text-text-on-light mb-2">Thank You!</h3>
+                  <p className="text-text-on-light/70">
                     We've received your message and will get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-white border border-gray-200 rounded-lg p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Request a Quote</h3>
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-white border border-border-line rounded-lg p-8">
+                  <h3 className="text-2xl font-bold text-text-on-light mb-6">Request a Quote</h3>
                   
                   <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -193,16 +193,16 @@ export default function Contact() {
                     />
 
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 mb-2">
+                      <label className="block text-sm font-medium text-text-on-light mb-2">
                         File Upload (Optional)
                       </label>
-                      <div className="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center">
-                        <p className="text-gray-500 text-sm">
+                      <div className="border-2 border-dashed border-border-line rounded-lg p-6 text-center">
+                        <p className="text-text-on-light/60 text-sm">
                           Tech packs, designs, or reference images can be uploaded here
                         </p>
                         <input
                           type="file"
-                          className="mt-2 text-sm text-gray-500"
+                          className="mt-2 text-sm text-text-on-light/60"
                           multiple
                           disabled
                         />
