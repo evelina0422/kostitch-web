@@ -24,7 +24,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div>
-            <h3 className="text-white text-xl font-bold mb-4">{siteConfig.companyName}</h3>
+            <Link to="/" className="inline-block mb-4">
+              <img 
+                src="/logo.svg" 
+                alt={siteConfig.companyName} 
+                className="h-8 md:h-10 w-auto max-w-[200px] md:max-w-[250px] hover:opacity-80 transition-opacity"
+              />
+            </Link>
             <p className="text-text-on-dark/80 mb-4">{siteConfig.tagline}</p>
             <div className="space-y-2 text-sm">
               <div className="flex items-start">
