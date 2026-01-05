@@ -7,7 +7,7 @@ import {homeContent} from '../../data/content'
 
 export default function HomeHero() {
   return (
-    <section className="pt-16 pb-20 md:pt-20 md:pb-28 bg-gradient-to-b from-light to-white">
+    <section className="pt-16 pb-20 md:pt-20 md:pb-28 bg-gradient-to-b from-light to-beige">
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -55,7 +55,7 @@ export default function HomeHero() {
             transition={{duration: 0.6, delay: 0.2}}
             className="relative"
           >
-            <div className="bg-border-line rounded-lg aspect-[4/3] flex items-center justify-center">
+            <div className="bg-beige rounded-lg aspect-[4/3] flex items-center justify-center border border-border-line">
               <span className="text-text-on-light/50">Factory Image Placeholder</span>
             </div>
           </motion.div>

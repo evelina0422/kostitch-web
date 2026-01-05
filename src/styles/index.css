@@ -5,13 +5,14 @@
 @layer base {
   :root {
     /* Brand theme variables */
-    --color-dark: #0F0F10;
-    --color-light: #F5F5F5;
-    --color-text-on-dark: #FFFFFF;
-    --color-text-on-light: #1F1F1F;
-    --color-border-line: #E0E0E0;
-    --color-accent: #D32F2F;
-    --color-accent-hover: #B71C1C;
+    --color-dark: #5A3E2B; /* Primary brown (replaces black) */
+    --color-light: #FAF7F2; /* Off-white background */
+    --color-beige: #EFE8DE; /* Light warm beige for sections/cards */
+    --color-text-on-dark: #FAF7F2; /* Off-white text on brown */
+    --color-text-on-light: #3A2618; /* Dark brown for headings/nav (replaces black) */
+    --color-border-line: #D4C4B0; /* Warm brown border */
+    --color-accent: #D32F2F; /* Brand accent red (keep existing) */
+    --color-accent-hover: #B71C1C; /* Brand accent red hover (keep existing) */
   }
 
   html {

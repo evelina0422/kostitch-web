@@ -13,7 +13,7 @@ export default function Button({
   
   const variants = {
     primary: 'bg-accent text-text-on-dark hover:bg-accent-hover focus:ring-accent',
-    secondary: 'bg-border-line text-text-on-light hover:bg-gray-300 focus:ring-gray-500',
+    secondary: 'bg-beige text-text-on-light hover:bg-border-line focus:ring-border-line',
     outline: 'border-2 border-accent text-accent hover:bg-accent/10 focus:ring-accent',
   }
   

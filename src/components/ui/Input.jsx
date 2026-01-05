@@ -26,7 +26,7 @@ export default function Input({
           error ? 'border-accent' : 'border-border-line'
         }`}
       />
-      {error && <p className="mt-1 text-sm text-red-600">{error.message}</p>}
+      {error && <p className="mt-1 text-sm text-accent">{error.message}</p>}
     </div>
   )
 }

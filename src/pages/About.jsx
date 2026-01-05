@@ -38,7 +38,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-light rounded-lg p-8 mb-12">
+            <div className="bg-beige rounded-lg p-8 mb-12">
               <h3 className="text-2xl font-bold text-text-on-light mb-6">Our Values</h3>
               <ul className="space-y-4">
                 {values.map((value, index) => (

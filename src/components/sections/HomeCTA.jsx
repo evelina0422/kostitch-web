@@ -23,13 +23,13 @@ export default function HomeCTA() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-accent hover:bg-gray-100">
+              <Button size="lg" variant="secondary" className="bg-light text-accent hover:bg-beige">
                 Request a Quote
                 <ArrowRight className="inline-block ml-2" size={20} />
               </Button>
             </Link>
             <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-text-on-dark text-text-on-dark hover:bg-white/10">
+              <Button size="lg" variant="outline" className="border-text-on-dark text-text-on-dark hover:bg-light/10">
                 Book a Call
               </Button>
             </Link>

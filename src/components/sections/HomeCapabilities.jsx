@@ -16,7 +16,7 @@ export default function HomeCapabilities() {
               whileInView={{opacity: 1, scale: 1}}
               viewport={{once: true}}
               transition={{delay: index * 0.05, duration: 0.4}}
-              className="bg-white p-6 rounded-lg text-center border border-border-line hover:border-accent hover:shadow-md transition-all"
+              className="bg-beige p-6 rounded-lg text-center border border-border-line hover:border-accent hover:shadow-md transition-all"
             >
               <p className="font-semibold text-text-on-light">{capability}</p>
             </motion.div>

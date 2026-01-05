@@ -37,7 +37,7 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
-              <div className="bg-light rounded-lg p-8 mb-8">
+              <div className="bg-beige rounded-lg p-8 mb-8">
                 <h3 className="text-2xl font-bold text-text-on-light mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
@@ -71,7 +71,7 @@ export default function Contact() {
                 </div>
               </div>
 
-              <div className="bg-light rounded-lg p-8">
+              <div className="bg-beige rounded-lg p-8">
                 <h3 className="text-xl font-bold text-text-on-light mb-4">Business Hours</h3>
                 <div className="space-y-2 text-text-on-light">
                   <div className="flex justify-between">
@@ -96,7 +96,7 @@ export default function Contact() {
                 <motion.div
                   initial={{opacity: 0, scale: 0.95}}
                   animate={{opacity: 1, scale: 1}}
-                  className="bg-green-50 border-2 border-green-200 rounded-lg p-8 text-center"
+                  className="bg-beige border-2 border-green-500 rounded-lg p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-text-on-light mb-2">Thank You!</h3>
@@ -105,7 +105,7 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-white border border-border-line rounded-lg p-8">
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-beige border border-border-line rounded-lg p-8">
                   <h3 className="text-2xl font-bold text-text-on-light mb-6">Request a Quote</h3>
                   
                   <div className="space-y-6">

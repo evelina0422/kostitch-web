@@ -5,7 +5,7 @@ import {homeContent} from '../../data/content'
 
 export default function HomeProcess() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-beige">
       <Container>
         <SectionHeader title={homeContent.process.title} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -18,7 +18,7 @@ export default function HomeProcess() {
               transition={{delay: index * 0.1, duration: 0.5}}
               className="relative"
             >
-              <div className="bg-light rounded-lg p-6 h-full border-l-4 border-accent">
+              <div className="bg-beige rounded-lg p-6 h-full border-l-4 border-accent">
                 <div className="text-accent font-bold text-sm mb-2">{step.number}</div>
                 <h3 className="text-xl font-bold text-text-on-light mb-3">{step.title}</h3>
                 <p className="text-text-on-light/70 leading-relaxed">{step.description}</p>

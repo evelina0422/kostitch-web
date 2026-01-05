@@ -37,7 +37,7 @@ export default function Process() {
                   <p className="text-lg text-text-on-light/70 leading-relaxed">{step.description}</p>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-border-line rounded-lg aspect-video flex items-center justify-center">
+                  <div className="bg-light rounded-lg aspect-video flex items-center justify-center border border-border-line">
                     <span className="text-text-on-light/50">Process Step Visual</span>
                   </div>
                 </div>

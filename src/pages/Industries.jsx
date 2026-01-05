@@ -25,9 +25,9 @@ export default function Industries() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.1, duration: 0.5}}
-                className="bg-white p-8 rounded-lg border border-border-line hover:border-accent hover:shadow-lg transition-all"
+                className="bg-beige p-8 rounded-lg border border-border-line hover:border-accent hover:shadow-lg transition-all"
               >
-                <div className="bg-border-line rounded-lg aspect-video mb-4 flex items-center justify-center">
+                <div className="bg-light rounded-lg aspect-video mb-4 flex items-center justify-center border border-border-line">
                   <span className="text-text-on-light/50 text-sm">Industry Image</span>
                 </div>
                 <h3 className="text-2xl font-bold text-text-on-light mb-3">{industry.title}</h3>

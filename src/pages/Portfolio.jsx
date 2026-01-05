@@ -33,9 +33,9 @@ export default function Portfolio() {
                 whileInView={{opacity: 1, scale: 1}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.1, duration: 0.5}}
-                className="bg-white rounded-lg overflow-hidden border border-border-line hover:shadow-lg transition-all"
+                className="bg-beige rounded-lg overflow-hidden border border-border-line hover:shadow-lg transition-all"
               >
-                <div className="bg-border-line aspect-[4/3] flex items-center justify-center">
+                <div className="bg-light aspect-[4/3] flex items-center justify-center border border-border-line">
                   <span className="text-text-on-light/50">Project Image Placeholder</span>
                 </div>
                 <div className="p-6">

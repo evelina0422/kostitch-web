@@ -55,7 +55,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-dark shadow-md' : 'bg-dark/95 backdrop-blur-sm'
+      isScrolled ? 'bg-light shadow-md' : 'bg-light/95 backdrop-blur-sm'
     } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
@@ -72,7 +72,7 @@ export default function Navbar() {
                 className={`text-sm font-medium transition-colors ${
                   location.pathname === link.path
                     ? 'text-accent'
-                    : 'text-text-on-dark hover:text-accent'
+                    : 'text-text-on-light hover:text-accent'
                 }`}
               >
                 {link.label}
@@ -86,7 +86,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-text-on-dark"
+            className="lg:hidden p-2 text-text-on-light"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,7 +101,7 @@ export default function Navbar() {
             initial={{opacity: 0, height: 0}}
             animate={{opacity: 1, height: 'auto'}}
             exit={{opacity: 0, height: 0}}
-            className="lg:hidden bg-dark border-t border-border-line"
+            className="lg:hidden bg-light border-t border-border-line"
           >
             <div className="container-custom py-4 space-y-4">
               {navLinks.map((link) => (
@@ -111,7 +111,7 @@ export default function Navbar() {
                   className={`block text-base font-medium ${
                     location.pathname === link.path
                       ? 'text-accent'
-                      : 'text-text-on-dark'
+                      : 'text-text-on-light'
                   }`}
                 >
                   {link.label}

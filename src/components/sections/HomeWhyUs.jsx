@@ -5,7 +5,7 @@ import {homeContent} from '../../data/content'
 
 export default function HomeWhyUs() {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-beige">
       <Container>
         <SectionHeader title={homeContent.whyUs.title} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

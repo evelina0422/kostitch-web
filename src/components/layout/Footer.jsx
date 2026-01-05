@@ -41,13 +41,13 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Phone className="w-4 h-4 mr-2 flex-shrink-0" />
-                <a href={`tel:${siteConfig.phone}`} className="hover:text-white transition-colors">
+                <a href={`tel:${siteConfig.phone}`} className="hover:text-accent transition-colors">
                   {siteConfig.phone}
                 </a>
               </div>
               <div className="flex items-center">
                 <Mail className="w-4 h-4 mr-2 flex-shrink-0" />
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-white transition-colors">
+                <a href={`mailto:${siteConfig.email}`} className="hover:text-accent transition-colors">
                   {siteConfig.email}
                 </a>
               </div>
@@ -56,11 +56,11 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Company</h4>
+            <h4 className="text-text-on-dark font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="text-sm hover:text-white transition-colors">
+                  <Link to={link.path} className="text-sm hover:text-accent transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -70,11 +70,11 @@ export default function Footer() {
 
           {/* Services Links */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Services</h4>
+            <h4 className="text-text-on-dark font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={`${link.path}-${index}`}>
-                  <Link to={link.path} className="text-sm hover:text-white transition-colors">
+                  <Link to={link.path} className="text-sm hover:text-accent transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -84,13 +84,13 @@ export default function Footer() {
 
           {/* Social & CTA */}
           <div>
-            <h4 className="text-white font-semibold mb-4">Connect</h4>
+            <h4 className="text-text-on-dark font-semibold mb-4">Connect</h4>
             <div className="flex space-x-4 mb-6">
               <a
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -99,7 +99,7 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -108,7 +108,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-border-line/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -122,7 +122,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-border-line/30 mt-12 pt-8 text-center text-sm text-text-on-dark/70">
+        <div className="border-t border-text-on-dark/30 mt-12 pt-8 text-center text-sm text-text-on-dark/70">
           <p>&copy; {new Date().getFullYear()} {siteConfig.companyName}. All rights reserved.</p>
         </div>
       </div>
