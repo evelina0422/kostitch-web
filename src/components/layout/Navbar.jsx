@@ -12,7 +12,6 @@ const navLinks = [
   {path: '/portfolio', label: 'Portfolio'},
   {path: '/process', label: 'Process'},
   {path: '/about', label: 'About'},
-  {path: '/contact', label: 'Contact'},
 ]
 
 export default function Navbar() {
