@@ -55,7 +55,7 @@ export default function Navbar() {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-light shadow-md' : 'bg-light/95 backdrop-blur-sm'
+      isScrolled ? 'bg-[#743014] shadow-md' : 'bg-[#743014] backdrop-blur-sm'
     } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
@@ -101,7 +101,7 @@ export default function Navbar() {
             initial={{opacity: 0, height: 0}}
             animate={{opacity: 1, height: 'auto'}}
             exit={{opacity: 0, height: 0}}
-            className="lg:hidden bg-light border-t border-border-line"
+            className="lg:hidden bg-[#743014] border-t border-border-line"
           >
             <div className="container-custom py-4 space-y-4">
               {navLinks.map((link) => (
