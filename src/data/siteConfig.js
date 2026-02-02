@@ -2,7 +2,7 @@ export const siteConfig = {
   companyName: 'Kostitch',
   tagline: 'Premium Garment Manufacturing',
   email: 'info@kostitch.com',
-  phone: '4077593721',
+  phone: '(407) 759-3721',
   address: {
     street: '123 Manufacturing Way',
     city: 'Los Angeles',
