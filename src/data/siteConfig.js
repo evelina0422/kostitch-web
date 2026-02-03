@@ -4,10 +4,10 @@ export const siteConfig = {
   email: 'info@kostitch.com',
   phone: '(407) 759-3721',
   address: {
-    street: '123 Manufacturing Way',
-    city: 'Los Angeles',
-    state: 'CA',
-    zip: '90001',
+    street: '2507 Investors Row, Unit H5',
+    city: 'Orlando',
+    state: 'FL',
+    zip: '32837',
     country: 'USA',
   },
   social: {
