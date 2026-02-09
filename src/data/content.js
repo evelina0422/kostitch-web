@@ -103,8 +103,8 @@ export const industriesContent = [
     description: 'Performance and lifestyle activewear for fitness and casual wear.',
   },
   {
-    title: 'Children\'s Wear',
-    description: 'Safe, comfortable, and durable clothing for infants through teens.',
+    title: 'Janitorial & Maintenance',
+    description: 'Practical, durable solutions tailored to the needs of janitorial and maintenance professionals.',
   },
   {
     title: 'Private Label',
