@@ -7,7 +7,6 @@ const portfolioItems = [
   {category: 'Fashion Apparel', description: 'Contemporary women\'s collection'},
   {category: 'Corporate Uniforms', description: 'Professional workwear for enterprise clients'},
   {category: 'Athleisure', description: 'Performance activewear line'},
-  {category: 'Children\'s Wear', description: 'Safe and comfortable kids\' clothing'},
   {category: 'Private Label', description: 'Custom branded retail collections'},
   {category: 'Promotional Apparel', description: 'Event and marketing merchandise'},
 ]
