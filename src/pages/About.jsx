@@ -60,37 +60,6 @@ export default function About() {
               </ul>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              <motion.div
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-accent mb-2">15+</div>
-                <div className="text-text-on-light/70">Years of Experience</div>
-              </motion.div>
-              <motion.div
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{delay: 0.1}}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-accent mb-2">500+</div>
-                <div className="text-text-on-light/70">Projects Completed</div>
-              </motion.div>
-              <motion.div
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{delay: 0.2}}
-                className="text-center"
-              >
-                <div className="text-4xl font-bold text-accent mb-2">50+</div>
-                <div className="text-text-on-light/70">Global Clients</div>
-              </motion.div>
-            </div>
           </div>
         </Container>
       </section>
