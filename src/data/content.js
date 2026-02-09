@@ -114,4 +114,25 @@ export const industriesContent = [
     title: 'Promotional Apparel',
     description: 'Custom branded merchandise for events, marketing, and corporate gifts.',
   },
+  {
+    title: 'Healthcare & Medical',
+    description: 'Functional, professional apparel designed to support healthcare teams.',
+  },
+  {
+    title: 'Construction, Trade, & Industrial',
+    description: 'Built tough for construction, trade, and industrial environments where performance matters.',
+  },
+  {
+    title: 'Hospitality & Food Services',
+    description: 'Stylish, functional uniforms designed for hospitality and food service professionals.',
+  },
+  {
+    title: 'Education & Institutions',
+    description: 'Uniforms and branded merchandise for schools, universities, and educational institutions.',
+  },
+  {
+    title: 'Security & Law Enforcement',
+    description: 'Uniforms and branded merchandise for security and law enforcement professionals.',
+  },
 ]
+
