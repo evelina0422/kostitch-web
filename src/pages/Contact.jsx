@@ -141,7 +141,7 @@ export default function Contact() {
                         label="Phone"
                         name="phone"
                         type="tel"
-                        placeholder="+1 (555) 123-4567"
+                        placeholder="+1 (XXX) XXX-XXXX"
                         register={register}
                         error={errors.phone}
                       />

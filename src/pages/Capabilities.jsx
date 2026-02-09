@@ -5,6 +5,10 @@ import SectionHeader from '../components/ui/SectionHeader'
 import {homeContent} from '../data/content'
 
 export default function Capabilities() {
+  const capabilityDescriptions = {
+    'Custom drapery': 'Made-to-measure drapery designed to perfectly fit your space and style.',
+  }
+
   return (
     <>
       <Seo
@@ -29,7 +33,8 @@ export default function Capabilities() {
               >
                 <h3 className="text-xl font-bold text-text-on-light mb-3">{capability}</h3>
                 <p className="text-text-on-light/70">
-                  Professional {capability.toLowerCase()} services with attention to detail and quality standards.
+                  {capabilityDescriptions[capability] ??
+                    `Professional ${capability.toLowerCase()} services with attention to detail and quality standards.`}
                 </p>
               </motion.div>
             ))}

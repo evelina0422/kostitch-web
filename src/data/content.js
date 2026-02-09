@@ -45,7 +45,7 @@ export const homeContent = {
       'Pattern Making',
       'Sampling & Prototyping',
       'Bulk Production',
-      'Screen Printing',
+      'Custom drapery',
       'Embroidery',
       'Washes & Finishing',
       'Labels & Tags',
