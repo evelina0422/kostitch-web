@@ -28,13 +28,16 @@ export default function About() {
             />
             <div className="prose prose-lg max-w-none mb-12">
               <p className="text-text-on-light/70 leading-relaxed mb-6">
-                With over 15 years of experience in the garment manufacturing industry, Kostitch has established itself as a trusted partner for brands worldwide. We specialize in bringing apparel concepts to life with precision, quality, and efficiency.
+                With over 5 years of experience in garment manufacturing, Kostitch supports businesses across the United States with dependable, production-driven apparel solutions. We specialize in turning designs into durable, high-quality garments built to perform in real-world environments.
               </p>
               <p className="text-text-on-light/70 leading-relaxed mb-6">
-                Our state-of-the-art facilities, combined with our team of skilled professionals, enable us to handle projects of all sizes—from small batch sampling to large-scale production runs. We serve fashion brands, corporate clients, retailers, and private label businesses across multiple industries.
+                Our production capabilities are designed to handle everything from small sampling runs to high-volume manufacturing. Backed by skilled technicians and streamlined processes, we deliver consistent results while meeting strict quality, timeline, and compliance requirements.
+              </p>
+              <p className="text-text-on-light/70 leading-relaxed mb-6">
+                We work with a broad range of industries, including fashion brands, corporate and workforce uniforms, athleisure, janitorial and maintenance apparel, private label programs, promotional products, healthcare and medical wear, construction and industrial workwear, hospitality and food services, education and institutions, and security and law enforcement.
               </p>
               <p className="text-text-on-light/70 leading-relaxed">
-                At Kostitch, we believe in building lasting partnerships. Our commitment to quality, reliability, and transparent communication ensures that every project meets and exceeds expectations.
+                At Kostitch, we operate as a manufacturing partner, not just a vendor. We prioritize clear communication, repeatable quality, and on-time delivery to support long-term, scalable partnerships.
               </p>
             </div>
 
