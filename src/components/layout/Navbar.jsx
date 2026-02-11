@@ -1,16 +1,16 @@
-import {useState, useEffect} from 'react'
-import {Link, useLocation} from 'react-router-dom'
-import {Menu, X} from 'lucide-react'
-import {motion, AnimatePresence} from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 import Button from '../ui/Button'
-import {siteConfig} from '../../data/siteConfig'
+import { siteConfig } from '../../data/siteConfig'
 
 const navLinks = [
-  {path: '/capabilities', label: 'Capabilities'},
-  {path: '/industries', label: 'Industries'},
-  {path: '/portfolio', label: 'Portfolio'},
-  {path: '/process', label: 'Process'},
-  {path: '/about', label: 'About'},
+  { path: '/capabilities', label: 'Capabilities' },
+  { path: '/industries', label: 'Industries' },
+  { path: '/portfolio', label: 'Portfolio' },
+  { path: '/process', label: 'Process' },
+  { path: '/about', label: 'About' },
 ]
 
 export default function Navbar() {
@@ -23,10 +23,10 @@ export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY
-      
+
       // Update background on scroll
       setIsScrolled(currentScrollY > 20)
-      
+
       // Determine scroll direction and visibility
       if (currentScrollY < lastScrollY) {
         // Scrolling up - show navbar
@@ -35,15 +35,15 @@ export default function Navbar() {
         // Scrolling down and past threshold - hide navbar
         setIsVisible(false)
       }
-      
+
       // Always show navbar at the top
       if (currentScrollY < 10) {
         setIsVisible(true)
       }
-      
+
       setLastScrollY(currentScrollY)
     }
-    
+
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [lastScrollY])
@@ -53,13 +53,12 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-[#bf9f93]/70 shadow-md' : 'bg-[#bf9f93]/70 backdrop-blur-sm'
-    } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#bf9f93]/70 shadow-md' : 'bg-[#bf9f93]/70 backdrop-blur-sm'
+      } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img src="/logo.svg" alt={siteConfig.companyName} className="h-[54px] w-auto" />
+            <img src="/logo.png" alt={siteConfig.companyName} className="h-[54px] w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -68,11 +67,10 @@ export default function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${
-                  location.pathname === link.path
-                    ? 'text-accent'
-                    : 'text-text-on-light hover:text-accent'
-                }`}
+                className={`text-sm font-medium transition-colors ${location.pathname === link.path
+                  ? 'text-accent'
+                  : 'text-text-on-light hover:text-accent'
+                  }`}
               >
                 {link.label}
               </Link>
@@ -97,9 +95,9 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{opacity: 0, height: 0}}
-            animate={{opacity: 1, height: 'auto'}}
-            exit={{opacity: 0, height: 0}}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
             className="lg:hidden bg-[#bf9f93]/70 border-t border-border-line"
           >
             <div className="container-custom py-4 space-y-4">
@@ -107,11 +105,10 @@ export default function Navbar() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`block text-base font-medium ${
-                    location.pathname === link.path
-                      ? 'text-accent'
-                      : 'text-text-on-light'
-                  }`}
+                  className={`block text-base font-medium ${location.pathname === link.path
+                    ? 'text-accent'
+                    : 'text-text-on-light'
+                    }`}
                 >
                   {link.label}
                 </Link>

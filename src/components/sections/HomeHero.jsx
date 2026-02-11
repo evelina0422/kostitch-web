@@ -1,9 +1,9 @@
-import {Link} from 'react-router-dom'
-import {motion} from 'framer-motion'
-import {ArrowRight, Check} from 'lucide-react'
+import { Link } from 'react-router-dom'
+import { motion } from 'framer-motion'
+import { ArrowRight, Check } from 'lucide-react'
 import Button from '../ui/Button'
 import Container from '../layout/Container'
-import {homeContent} from '../../data/content'
+import { homeContent } from '../../data/content'
 
 export default function HomeHero() {
   return (
@@ -11,9 +11,9 @@ export default function HomeHero() {
       <Container>
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
-            initial={{opacity: 0, y: 20}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 0.6}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-on-light mb-6 leading-tight">
               {homeContent.hero.headline}
@@ -38,9 +38,9 @@ export default function HomeHero() {
               {homeContent.hero.bullets.map((bullet, index) => (
                 <motion.li
                   key={index}
-                  initial={{opacity: 0, x: -20}}
-                  animate={{opacity: 1, x: 0}}
-                  transition={{delay: 0.3 + index * 0.1, duration: 0.5}}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3 + index * 0.1, duration: 0.5 }}
                   className="flex items-center text-text-on-light"
                 >
                   <Check className="w-5 h-5 text-accent mr-3 flex-shrink-0" />
@@ -50,13 +50,17 @@ export default function HomeHero() {
             </ul>
           </motion.div>
           <motion.div
-            initial={{opacity: 0, scale: 0.95}}
-            animate={{opacity: 1, scale: 1}}
-            transition={{duration: 0.6, delay: 0.2}}
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-beige rounded-lg aspect-[4/3] flex items-center justify-center border border-border-line">
-              <span className="text-text-on-light/50">Factory Image Placeholder</span>
+            <div className="bg-beige rounded-lg aspect-[4/3] overflow-hidden border border-border-line">
+              <img
+                src={homeContent.hero.image}
+                alt="Modern garment manufacturing facility"
+                className="w-full h-full object-cover rounded-lg"
+              />
             </div>
           </motion.div>
         </div>

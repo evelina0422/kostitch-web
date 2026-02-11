@@ -1,19 +1,19 @@
-import {Link} from 'react-router-dom'
-import {Mail, Phone, MapPin, Linkedin, Instagram, Facebook} from 'lucide-react'
-import {siteConfig} from '../../data/siteConfig'
+import { Link } from 'react-router-dom'
+import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react'
+import { siteConfig } from '../../data/siteConfig'
 
 const footerLinks = {
   company: [
-    {path: '/about', label: 'About Us'},
-    {path: '/capabilities', label: 'Capabilities'},
-    {path: '/process', label: 'Our Process'},
-    {path: '/portfolio', label: 'Portfolio'},
+    { path: '/about', label: 'About Us' },
+    { path: '/capabilities', label: 'Capabilities' },
+    { path: '/process', label: 'Our Process' },
+    { path: '/portfolio', label: 'Portfolio' },
   ],
   services: [
-    {path: '/industries', label: 'Industries'},
-    {path: '/contact', label: 'Contact'},
-    {path: '/contact', label: 'Request a Quote'},
-    {path: '/contact', label: 'Book a Call'},
+    { path: '/industries', label: 'Industries' },
+    { path: '/contact', label: 'Contact' },
+    { path: '/contact', label: 'Request a Quote' },
+    { path: '/contact', label: 'Book a Call' },
   ],
 }
 
@@ -25,9 +25,9 @@ export default function Footer() {
           {/* Company Info */}
           <div>
             <Link to="/" className="inline-block mb-4">
-              <img 
-                src="/logo.svg" 
-                alt={siteConfig.companyName} 
+              <img
+                src="/logo.png"
+                alt={siteConfig.companyName}
                 className="h-8 md:h-10 w-auto max-w-[200px] md:max-w-[250px] hover:opacity-80 transition-opacity"
               />
             </Link>

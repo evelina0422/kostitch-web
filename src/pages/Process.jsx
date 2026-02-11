@@ -1,8 +1,8 @@
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import {homeContent} from '../data/content'
+import { homeContent } from '../data/content'
 
 export default function Process() {
   return (
@@ -21,13 +21,12 @@ export default function Process() {
             {homeContent.process.steps.map((step, index) => (
               <motion.div
                 key={index}
-                initial={{opacity: 0, x: index % 2 === 0 ? -20 : 20}}
-                whileInView={{opacity: 1, x: 0}}
-                viewport={{once: true}}
-                transition={{delay: index * 0.1, duration: 0.5}}
-                className={`flex flex-col md:flex-row gap-6 items-center ${
-                  index % 2 === 1 ? 'md:flex-row-reverse' : ''
-                }`}
+                initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.5 }}
+                className={`flex flex-col md:flex-row gap-6 items-center ${index % 2 === 1 ? 'md:flex-row-reverse' : ''
+                  }`}
               >
                 <div className="flex-1">
                   <div className="inline-block bg-accent text-text-on-dark text-sm font-bold px-4 py-2 rounded-lg mb-4">
@@ -37,8 +36,12 @@ export default function Process() {
                   <p className="text-lg text-text-on-light/70 leading-relaxed">{step.description}</p>
                 </div>
                 <div className="flex-1">
-                  <div className="bg-light rounded-lg aspect-video flex items-center justify-center border border-border-line">
-                    <span className="text-text-on-light/50">Process Step Visual</span>
+                  <div className="bg-light rounded-lg aspect-video mb-4 overflow-hidden border border-border-line">
+                    <img
+                      src={step.image}
+                      alt={step.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                    />
                   </div>
                 </div>
               </motion.div>
