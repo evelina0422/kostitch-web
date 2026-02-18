@@ -1,15 +1,15 @@
 import {motion} from 'framer-motion'
 import Container from '../layout/Container'
 import SectionHeader from '../ui/SectionHeader'
-import {homeContent} from '../../data/content'
+import {processContent} from '../../data'
 
 export default function HomeProcess() {
   return (
     <section className="py-20 bg-beige">
       <Container>
-        <SectionHeader title={homeContent.process.title} />
+        <SectionHeader title={processContent.title} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {homeContent.process.steps.map((step, index) => (
+          {processContent.steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{opacity: 0, y: 20}}

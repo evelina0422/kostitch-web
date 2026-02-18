@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Check } from 'lucide-react'
 import Button from '../ui/Button'
 import Container from '../layout/Container'
-import { homeContent } from '../../data/content'
+import { homeContent } from '../../data'
 
 export default function HomeHero() {
   return (

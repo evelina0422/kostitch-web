@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import { industriesContent } from '../data/content'
+import { industriesContent } from '../data'
 
 export default function Industries() {
   return (

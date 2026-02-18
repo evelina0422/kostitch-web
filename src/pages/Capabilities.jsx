@@ -2,7 +2,7 @@ import {motion} from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import {homeContent} from '../data/content'
+import {homeContent} from '../data'
 
 export default function Capabilities() {
   const capabilityDescriptions = {

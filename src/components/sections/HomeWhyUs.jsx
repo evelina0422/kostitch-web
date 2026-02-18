@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion'
 import Container from '../layout/Container'
 import SectionHeader from '../ui/SectionHeader'
-import {homeContent} from '../../data/content'
+import {homeContent} from '../../data'
 
 export default function HomeWhyUs() {
   return (

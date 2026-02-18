@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import { homeContent } from '../data/content'
+import { processContent } from '../data'
 
 export default function Process() {
   return (
@@ -18,7 +18,7 @@ export default function Process() {
             subtitle="A streamlined approach from concept to delivery"
           />
           <div className="space-y-8">
-            {homeContent.process.steps.map((step, index) => (
+            {processContent.steps.map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
