@@ -32,8 +32,8 @@ export default function Process() {
                   <div className="inline-block bg-accent text-text-on-dark text-sm font-bold px-4 py-2 rounded-lg mb-4">
                     {step.number}
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-text-on-light mb-4">{step.title}</h3>
-                  <p className="text-lg text-text-on-light/70 leading-relaxed">{step.description}</p>
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{step.title}</h3>
+                  <p className="text-lg text-white/80 leading-relaxed">{step.description}</p>
                 </div>
                 <div className="flex-1">
                   <div className="bg-light rounded-lg aspect-video mb-4 overflow-hidden border border-border-line">

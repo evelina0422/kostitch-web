@@ -5,7 +5,7 @@ import {homeContent} from '../../data'
 
 export default function HomeCapabilities() {
   return (
-    <section className="py-20 bg-light">
+    <section className="py-20 bg-zinc-950">
       <Container>
         <SectionHeader title={homeContent.capabilities.title} />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">

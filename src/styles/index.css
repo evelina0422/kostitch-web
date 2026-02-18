@@ -4,15 +4,16 @@
 
 @layer base {
   :root {
-    /* Brand theme variables */
-    --color-dark: #5A3E2B; /* Primary brown (replaces black) */
-    --color-light: #FAF7F2; /* Off-white background */
-    --color-beige: #EFE8DE; /* Light warm beige for sections/cards */
-    --color-text-on-dark: #FAF7F2; /* Off-white text on brown */
-    --color-text-on-light: #3A2618; /* Dark brown for headings/nav (replaces black) */
-    --color-border-line: #D4C4B0; /* Warm brown border */
-    --color-accent: #D32F2F; /* Brand accent red (keep existing) */
-    --color-accent-hover: #B71C1C; /* Brand accent red hover (keep existing) */
+    /* Dark luxury theme variables */
+    --color-dark: #1d171e; /* Deep purple-black background */
+    --color-light: #2a232c; /* Slightly lighter dark for sections */
+    --color-beige: #EFE8DE; /* Light warm beige for cards (original) */
+    --color-text-on-dark: #ffffff; /* Pure white for maximum contrast */
+    --color-text-on-light: #3A2618; /* Dark brown text for light backgrounds (original) */
+    --color-border-line: #D4C4B0; /* Warm brown border (original) */
+    --color-accent: #c82f3c; /* Vibrant luxury red */
+    --color-accent-hover: #931e35; /* Darker red for hover states */
+    --color-accent-gold: #d4af37; /* Luxury gold accent */
   }
 
   html {
@@ -22,7 +23,7 @@
   body {
     color: var(--color-text-on-light);
     @apply antialiased;
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
   }
 }
 

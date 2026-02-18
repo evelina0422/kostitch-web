@@ -5,7 +5,7 @@ import {processContent} from '../../data'
 
 export default function HomeProcess() {
   return (
-    <section className="py-20 bg-beige">
+    <section className="py-20 bg-zinc-900">
       <Container>
         <SectionHeader title={processContent.title} />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

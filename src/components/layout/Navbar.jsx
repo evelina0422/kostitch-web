@@ -53,7 +53,7 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#bf9f93]/70 shadow-md' : 'bg-[#bf9f93]/70 backdrop-blur-sm'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-dark/95 shadow-md' : 'bg-dark/95 backdrop-blur-sm'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16">
@@ -69,7 +69,7 @@ export default function Navbar() {
                 to={link.path}
                 className={`text-sm font-medium transition-colors ${location.pathname === link.path
                   ? 'text-accent'
-                  : 'text-text-on-light hover:text-accent'
+                  : 'text-white/90 hover:text-accent'
                   }`}
               >
                 {link.label}
@@ -83,7 +83,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-text-on-light"
+            className="lg:hidden p-2 text-white"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -98,7 +98,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#bf9f93]/70 border-t border-border-line"
+            className="lg:hidden bg-dark/95 border-t border-border-line"
           >
             <div className="container-custom py-4 space-y-4">
               {navLinks.map((link) => (
@@ -107,7 +107,7 @@ export default function Navbar() {
                   to={link.path}
                   className={`block text-base font-medium ${location.pathname === link.path
                     ? 'text-accent'
-                    : 'text-text-on-light'
+                    : 'text-white/90'
                     }`}
                 >
                   {link.label}
