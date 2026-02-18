@@ -7,7 +7,7 @@ export default function HomeWhyUs() {
   return (
     <section className="py-20 bg-beige">
       <Container>
-        <SectionHeader title={homeContent.whyUs.title} />
+        <SectionHeader title={homeContent.whyUs.title} variant="light" />
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {homeContent.whyUs.items.map((item, index) => (
             <motion.div
