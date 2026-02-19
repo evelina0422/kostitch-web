@@ -26,7 +26,7 @@ export default function Contact() {
   const [token, setToken] = useState("");
 
   const onSubmit = async (data) => {
-    console.log(data)
+    //console.log(data)
     setIsSubmitting(true)
     setError(null)
 
