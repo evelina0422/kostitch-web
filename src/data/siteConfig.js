@@ -15,4 +15,18 @@ export const siteConfig = {
     instagram: 'https://instagram.com/kostitch',
     facebook: 'https://facebook.com/kostitch',
   },
+  businessHours: [
+    {
+      days: 'Monday - Friday',
+      hours: '9:00 AM - 6:00 PM',
+    },
+    {
+      days: 'Saturday',
+      hours: '10:00 AM - 4:00 PM',
+    },
+    {
+      days: 'Sunday',
+      hours: 'Closed',
+    },
+  ],
 }

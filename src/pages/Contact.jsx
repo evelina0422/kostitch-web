@@ -1,24 +1,118 @@
-import {useState} from 'react'
-import {useForm} from 'react-hook-form'
-import {motion} from 'framer-motion'
-import {Mail, Phone, MapPin, CheckCircle} from 'lucide-react'
+import { useState } from 'react'
+import { useForm } from 'react-hook-form'
+import { motion } from 'framer-motion'
+import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
 import Input from '../components/ui/Input'
 import Textarea from '../components/ui/Textarea'
 import Button from '../components/ui/Button'
-import {siteConfig} from '../data/siteConfig'
+import { siteConfig } from '../data/siteConfig'
+import { Turnstile } from '@marsidev/react-turnstile'; //
 
 export default function Contact() {
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const {register, handleSubmit, formState: {errors}, reset} = useForm()
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [error, setError] = useState(null)
+  const [isDragging, setIsDragging] = useState(false)
+  const [selectedFiles, setSelectedFiles] = useState([])
+  const { register, handleSubmit, formState: { errors }, reset, setValue } = useForm({
+    defaultValues: {
+      files: []
+    }
+  })
+  // Inside your Contact function...
+  const [token, setToken] = useState("");
 
-  const onSubmit = (data) => {
-    console.log('Form submitted:', data)
-    setIsSubmitted(true)
-    reset()
-    setTimeout(() => setIsSubmitted(false), 5000)
+  const onSubmit = async (data) => {
+    console.log(data)
+    setIsSubmitting(true)
+    setError(null)
+
+    if (!token) {
+      setError("Please complete the security check.");
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      const formData = new FormData()
+
+      // 1. Append standard text fields
+      Object.keys(data).forEach(key => {
+        if (key !== 'files') {
+          formData.append(key, data[key]);
+        }
+      });
+
+      // 2. Append multiple files correctly
+      if (data.files && data.files.length > 0) {
+        // Array.from is necessary because data.files is a FileList
+        Array.from(data.files).forEach((file) => {
+          // Note: The parser will collect all 'files' keys into result.files
+          formData.append('files', file);
+        });
+      }
+
+      // 3. Append the Turnstile token
+      formData.append('cf_token', token);
+
+      const response = await fetch('https://y42g73jm6egykrfjx7vogctn2i0hznab.lambda-url.us-west-2.on.aws/', {
+        method: 'POST',
+        body: formData, // Send as FormData (supports files)
+        // Note: Don't set Content-Type header - browser will set it automatically with boundary
+      })
+
+      if (!response.ok) {
+        throw new Error('Failed to submit form')
+      }
+
+      setIsSubmitted(true)
+      reset(); // Clear form
+      setSelectedFiles([]); // Clear UI state
+      //setTimeout(() => setIsSubmitted(false), 5000)
+    } catch (err) {
+      console.error('Form submission error:', err)
+      setError('Failed to submit form. Please try again or contact us directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+  const handleDragOver = (e) => {
+    e.preventDefault()
+    setIsDragging(true)
+  }
+
+  const handleDragLeave = (e) => {
+    e.preventDefault()
+    setIsDragging(false)
+  }
+
+  const handleDrop = (e) => {
+    e.preventDefault()
+    setIsDragging(false)
+
+    const files = Array.from(e.dataTransfer.files)
+    setSelectedFiles(files)
+
+    // Create a DataTransfer object to set files on the input
+    const dataTransfer = new DataTransfer()
+    files.forEach(file => dataTransfer.items.add(file))
+
+    // Update react-hook-form value
+    setValue('files', dataTransfer.files)
+  }
+
+  const handleFileChange = (e) => {
+    const files = e.target.files
+    const filesArray = Array.from(files)
+
+    setSelectedFiles(filesArray)
+
+    // Update react-hook-form's internal state
+    setValue('files', files, { shouldValidate: true })
   }
 
   return (
@@ -33,7 +127,7 @@ export default function Contact() {
             title="Get in Touch"
             subtitle="Ready to start your project? We're here to help."
           />
-          
+
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div>
@@ -74,18 +168,12 @@ export default function Contact() {
               <div className="bg-beige rounded-lg p-8">
                 <h3 className="text-xl font-bold text-text-on-light mb-4">Business Hours</h3>
                 <div className="space-y-2 text-text-on-light">
-                  <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-semibold">9:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Saturday</span>
-                    <span className="font-semibold">10:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Sunday</span>
-                    <span className="font-semibold">Closed</span>
-                  </div>
+                  {siteConfig.businessHours.map((schedule, index) => (
+                    <div key={index} className="flex justify-between">
+                      <span>{schedule.days}</span>
+                      <span className="font-semibold">{schedule.hours}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -94,8 +182,8 @@ export default function Contact() {
             <div>
               {isSubmitted ? (
                 <motion.div
-                  initial={{opacity: 0, scale: 0.95}}
-                  animate={{opacity: 1, scale: 1}}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   className="bg-beige border-2 border-green-500 rounded-lg p-8 text-center"
                 >
                   <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
@@ -107,7 +195,7 @@ export default function Contact() {
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-beige border border-border-line rounded-lg p-8">
                   <h3 className="text-2xl font-bold text-text-on-light mb-6">Request a Quote</h3>
-                  
+
                   <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <Input
@@ -196,21 +284,69 @@ export default function Contact() {
                       <label className="block text-sm font-medium text-text-on-light mb-2">
                         File Upload (Optional)
                       </label>
-                      <div className="border-2 border-dashed border-border-line rounded-lg p-6 text-center">
-                        <p className="text-text-on-light/60 text-sm">
-                          Tech packs, designs, or reference images can be uploaded here
+                      <div
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onDrop={handleDrop}
+                        className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${isDragging
+                          ? 'border-accent bg-accent/5'
+                          : 'border-border-line'
+                          }`}
+                      >
+                        <p className="text-text-on-light/60 text-sm mb-2">
+                          {isDragging
+                            ? 'Drop files here...'
+                            : 'Drag & drop files here, or click to select'}
+                        </p>
+                        <p className="text-text-on-light/40 text-xs mb-3">
+                          PDF, JPG, PNG, DOC, DOCX
                         </p>
                         <input
                           type="file"
-                          className="mt-2 text-sm text-text-on-light/60"
+                          onChange={handleFileChange}
+                          className="hidden"
+                          id="file-upload"
                           multiple
-                          disabled
+                          accept=".pdf,.jpg,.jpeg,.png,.doc,.docx"
                         />
+                        <label
+                          htmlFor="file-upload"
+                          className="inline-block cursor-pointer bg-beige text-text-on-light px-4 py-2 rounded-lg hover:bg-border-line transition-colors text-sm"
+                        >
+                          Choose Files
+                        </label>
+                        {selectedFiles.length > 0 && (
+                          <div className="mt-4 text-left">
+                            <p className="text-text-on-light/70 text-sm font-semibold mb-2">
+                              Selected files ({selectedFiles.length}):
+                            </p>
+                            <ul className="space-y-1">
+                              {selectedFiles.map((file, index) => (
+                                <li key={index} className="text-text-on-light/60 text-xs">
+                                  📎 {file.name} ({(file.size / 1024).toFixed(1)} KB)
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
                       </div>
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full">
-                      Submit Request
+                    {error && (
+                      <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                        {error}
+                      </div>
+                    )}
+
+                    <div className="mt-6 flex justify-center">
+                      <Turnstile
+                        siteKey="0x4AAAAAABDoDGnW10n7BTtL"
+                        onSuccess={(token) => setToken(token)}
+                      />
+                    </div>
+
+                    <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
+                      {isSubmitting ? 'Submitting...' : 'Submit Request'}
                     </Button>
                   </div>
                 </form>
