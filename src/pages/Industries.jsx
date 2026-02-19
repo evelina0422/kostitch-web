@@ -8,17 +8,17 @@ export default function Industries() {
   return (
     <>
       <Seo
-        title="Industries We Serve - Kostitch"
-        description="We serve fashion brands, corporate uniforms, athleisure, children's wear, private label, and promotional apparel industries."
+        title={industriesContent.seo.title}
+        description={industriesContent.seo.description}
       />
       <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
-            title="Industries We Serve"
-            subtitle="Expert manufacturing solutions across diverse apparel markets"
+            title={industriesContent.title}
+            subtitle={industriesContent.subtitle}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industriesContent.map((industry, index) => (
+            {industriesContent.items.map((industry, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}

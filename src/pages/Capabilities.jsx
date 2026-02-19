@@ -1,30 +1,30 @@
-import {motion} from 'framer-motion'
+import { motion } from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import {capabilitiesContent} from '../data'
+import { capabilitiesContent } from '../data'
 
 export default function Capabilities() {
   return (
     <>
       <Seo
-        title="Our Capabilities - Kostitch"
-        description="Comprehensive garment manufacturing capabilities including cut & sew, pattern making, sampling, bulk production, embroidery, and more."
+        title={capabilitiesContent.seo.title}
+        description={capabilitiesContent.seo.description}
       />
       <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
-            title="Our Manufacturing Capabilities"
-            subtitle="From design to delivery, we offer end-to-end garment manufacturing services"
+            title={capabilitiesContent.title}
+            subtitle={capabilitiesContent.subtitle}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {capabilitiesContent.map((capability, index) => (
+            {capabilitiesContent.items.map((capability, index) => (
               <motion.div
                 key={index}
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{delay: index * 0.05, duration: 0.5}}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05, duration: 0.5 }}
                 className="bg-beige p-8 rounded-lg border border-border-line hover:border-accent hover:shadow-lg transition-all"
               >
                 <h3 className="text-xl font-bold text-text-on-light mb-3">{capability.title}</h3>

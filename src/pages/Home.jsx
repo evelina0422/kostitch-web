@@ -4,13 +4,14 @@ import HomeWhyUs from '../components/sections/HomeWhyUs'
 import HomeCapabilities from '../components/sections/HomeCapabilities'
 import HomeProcess from '../components/sections/HomeProcess'
 import HomeCTA from '../components/sections/HomeCTA'
+import {homeContent} from '../data'
 
 export default function Home() {
   return (
     <>
       <Seo
-        title="Kostitch - Premium Garment Manufacturing for Global Brands"
-        description="Professional garment manufacturing services. From concept to delivery, we bring your apparel visions to life with precision, quality, and reliability."
+        title={homeContent.seo.title}
+        description={homeContent.seo.description}
       />
       <HomeHero />
       <HomeWhyUs />

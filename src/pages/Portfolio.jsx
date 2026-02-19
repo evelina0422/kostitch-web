@@ -2,23 +2,23 @@ import {motion} from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
 import SectionHeader from '../components/ui/SectionHeader'
-import { portfolioItems } from '../data'
+import { portfolioContent } from '../data'
 
 export default function Portfolio() {
   return (
     <>
       <Seo
-        title="Our Portfolio - Kostitch"
-        description="Explore our portfolio of successful garment manufacturing projects across fashion, uniforms, athleisure, and more."
+        title={portfolioContent.seo.title}
+        description={portfolioContent.seo.description}
       />
       <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
-            title="Our Portfolio"
-            subtitle="Showcasing quality craftsmanship across diverse projects"
+            title={portfolioContent.title}
+            subtitle={portfolioContent.subtitle}
           />
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {portfolioItems.map((item, index) => (
+            {portfolioContent.items.map((item, index) => (
               <motion.div
                 key={index}
                 initial={{opacity: 0, scale: 0.95}}

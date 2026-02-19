@@ -8,14 +8,14 @@ export default function Process() {
   return (
     <>
       <Seo
-        title="Our Manufacturing Process - Kostitch"
-        description="Learn about our streamlined manufacturing process from inquiry to delivery, ensuring quality and efficiency at every step."
+        title={processContent.seo.title}
+        description={processContent.seo.description}
       />
       <section className="pt-16 pb-20">
         <Container>
           <SectionHeader
-            title="Our Manufacturing Process"
-            subtitle="A streamlined approach from concept to delivery"
+            title={processContent.title}
+            subtitle={processContent.subtitle}
           />
           <div className="space-y-8">
             {processContent.steps.map((step, index) => (

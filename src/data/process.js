@@ -1,5 +1,10 @@
 export const processContent = {
-  title: 'Our Process',
+  seo: {
+    title: 'Our Manufacturing Process - Kostitch',
+    description: 'From inquiry to delivery: our streamlined garment manufacturing process includes consultation, tech pack review, sampling, production, quality control, and shipping.',
+  },
+  title: 'Our Manufacturing Process',
+  subtitle: 'A streamlined approach from concept to delivery',
   steps: [
     {
       number: '01',

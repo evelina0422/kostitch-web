@@ -1,4 +1,8 @@
 export const homeContent = {
+  seo: {
+    title: 'Kostitch - Premium Garment Manufacturing for Global Brands',
+    description: 'Professional garment manufacturing services from concept to delivery. Cut & sew, sampling, bulk production, and quality control for fashion brands worldwide.',
+  },
   hero: {
     headline: 'Premium Garment Manufacturing for Global Brands',
     subheadline: 'From concept to delivery, we bring your apparel visions to life with precision, quality, and reliability.',
