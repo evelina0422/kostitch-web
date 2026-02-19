@@ -39,18 +39,4 @@ export const homeContent = {
       },
     ],
   },
-  capabilities: {
-    title: 'Our Capabilities',
-    items: [
-      'Cut & Sew',
-      'Pattern Making',
-      'Sampling & Prototyping',
-      'Bulk Production',
-      'Custom drapery',
-      'Embroidery',
-      'Washes & Finishing',
-      'Labels & Tags',
-      'Custom Packaging',
-    ],
-  },
 }
