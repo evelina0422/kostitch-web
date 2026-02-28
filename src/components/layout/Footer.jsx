@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { Mail, Phone, MapPin, Linkedin, Instagram, Facebook } from 'lucide-react'
+import { SiTiktok, SiYoutube, SiPinterest } from 'react-icons/si'
 import { siteConfig } from '../../data/siteConfig'
 
 const footerLinks = {
@@ -85,7 +86,7 @@ export default function Footer() {
           {/* Social & CTA */}
           <div>
             <h4 className="text-text-on-dark font-semibold mb-4">Connect</h4>
-            <div className="flex space-x-4 mb-6">
+            <div className="flex flex-wrap gap-3 mb-6">
               <a
                 href={siteConfig.social.linkedin}
                 target="_blank"
@@ -113,6 +114,39 @@ export default function Footer() {
               >
                 <Facebook size={20} />
               </a>
+              {siteConfig.social.tiktok && (
+                <a
+                  href={siteConfig.social.tiktok}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  aria-label="TikTok"
+                >
+                  <SiTiktok size={20} />
+                </a>
+              )}
+              {siteConfig.social.youtube && (
+                <a
+                  href={siteConfig.social.youtube}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  aria-label="YouTube"
+                >
+                  <SiYoutube size={20} />
+                </a>
+              )}
+              {siteConfig.social.pinterest && (
+                <a
+                  href={siteConfig.social.pinterest}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  aria-label="Pinterest"
+                >
+                  <SiPinterest size={20} />
+                </a>
+              )}
             </div>
             <Link to="/contact">
               <button className="w-full bg-accent text-text-on-dark py-2 px-4 rounded-lg font-semibold hover:bg-accent-hover transition-colors">
