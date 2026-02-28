@@ -9,9 +9,10 @@ export const homeContent = {
     image: '/images/001eef80d00d17511676d006c9f051c5.jpg',
     bullets: [
       'Competitive MOQs starting at 500 units',
-      'Fast lead times: 4-8 weeks typical',
-      'Full-service: sampling to bulk production',
-      'ISO certified quality control',
+      'Flexible order quantities to support businesses at every stage',
+      'Reliable production timelines with clear communication',
+      'End-to-end manufacturing support, from sampling to full production',
+      'Quality-driven workmanship with consistent in-house inspections',
     ],
   },
   whyUs: {
