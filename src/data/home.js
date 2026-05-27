@@ -8,7 +8,6 @@ export const homeContent = {
     subheadline: 'From concept to delivery, we bring your apparel visions to life with precision, quality, and reliability.',
     image: '/images/001eef80d00d17511676d006c9f051c5.jpg',
     bullets: [
-      'Competitive MOQs starting at 500 units',
       'Flexible order quantities to support businesses at every stage',
       'Reliable production timelines with clear communication',
       'End-to-end manufacturing support, from sampling to full production',

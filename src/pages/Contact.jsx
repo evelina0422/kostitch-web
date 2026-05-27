@@ -194,7 +194,7 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit(onSubmit)} className="bg-beige border border-border-line rounded-lg p-8">
-                  <h3 className="text-2xl font-bold text-text-on-light mb-6">Request a Quote</h3>
+                  <h3 className="text-2xl font-bold text-text-on-light mb-6">Quote</h3>
 
                   <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

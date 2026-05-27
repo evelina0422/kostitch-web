@@ -6,14 +6,12 @@ import { siteConfig } from '../../data/siteConfig'
 const footerLinks = {
   company: [
     { path: '/about', label: 'About Us' },
-    { path: '/capabilities', label: 'Capabilities' },
-    { path: '/process', label: 'Our Process' },
+    { path: '/capabilities', label: 'Services' },
     { path: '/portfolio', label: 'Portfolio' },
   ],
   services: [
-    { path: '/industries', label: 'Industries' },
     { path: '/contact', label: 'Contact' },
-    { path: '/contact', label: 'Request a Quote' },
+    { path: '/contact', label: 'Quote' },
     { path: '/contact', label: 'Book a Call' },
   ],
 }
@@ -150,7 +148,7 @@ export default function Footer() {
             </div>
             <Link to="/contact">
               <button className="w-full bg-accent text-text-on-dark py-2 px-4 rounded-lg font-semibold hover:bg-accent-hover transition-colors">
-                Request a Quote
+                Quote
               </button>
             </Link>
           </div>

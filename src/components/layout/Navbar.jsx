@@ -6,11 +6,9 @@ import Button from '../ui/Button'
 import { siteConfig } from '../../data/siteConfig'
 
 const navLinks = [
-  { path: '/capabilities', label: 'Capabilities' },
-  { path: '/industries', label: 'Industries' },
+  { path: '/capabilities', label: 'Services' },
   { path: '/portfolio', label: 'Portfolio' },
-  { path: '/process', label: 'Process' },
-  { path: '/about', label: 'About' },
+  { path: '/about', label: 'About Us' },
 ]
 
 export default function Navbar() {
@@ -76,7 +74,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link to="/contact">
-              <Button size="sm">Request a Quote</Button>
+              <Button size="sm">Quote</Button>
             </Link>
           </div>
 
@@ -114,7 +112,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <Link to="/contact" className="block">
-                <Button size="sm" className="w-full">Request a Quote</Button>
+                <Button size="sm" className="w-full">Quote</Button>
               </Link>
             </div>
           </motion.div>

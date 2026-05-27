@@ -3,9 +3,7 @@ import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import Home from '../pages/Home'
 import Capabilities from '../pages/Capabilities'
-import Industries from '../pages/Industries'
 import Portfolio from '../pages/Portfolio'
-import Process from '../pages/Process'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
 
@@ -34,16 +32,8 @@ export const router = createBrowserRouter([
         element: <Capabilities />,
       },
       {
-        path: '/industries',
-        element: <Industries />,
-      },
-      {
         path: '/portfolio',
         element: <Portfolio />,
-      },
-      {
-        path: '/process',
-        element: <Process />,
       },
       {
         path: '/about',

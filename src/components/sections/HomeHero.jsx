@@ -24,7 +24,7 @@ export default function HomeHero() {
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <Link to="/contact">
                 <Button size="lg" className="w-full sm:w-auto">
-                  Request a Quote
+                  Quote
                   <ArrowRight className="inline-block ml-2" size={20} />
                 </Button>
               </Link>

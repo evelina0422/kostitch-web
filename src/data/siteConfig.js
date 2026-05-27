@@ -14,6 +14,9 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/company/kostitch',
     instagram: 'https://instagram.com/kostitch',
     facebook: 'https://facebook.com/kostitch',
+    tiktok: 'https://tiktok.com/@kostitch',
+    youtube: 'https://youtube.com/@kostitch',
+    pinterest: 'https://pinterest.com/kostitch',
   },
   businessHours: [
     {

@@ -24,7 +24,7 @@ export default function HomeCTA() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="bg-light text-accent hover:bg-beige">
-                Request a Quote
+                Quote
                 <ArrowRight className="inline-block ml-2" size={20} />
               </Button>
             </Link>
