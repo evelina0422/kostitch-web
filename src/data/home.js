@@ -4,9 +4,9 @@ export const homeContent = {
     description: 'Professional garment manufacturing services from concept to delivery. Cut & sew, sampling, bulk production, and quality control for fashion brands worldwide.',
   },
   hero: {
-    headline: 'Premium Garment Manufacturing for Global Brands',
+    headline: 'Custom Sewing for Every Industry',
+    bannerImage: '/images/hero-banner.png',
     subheadline: 'From concept to delivery, we bring your apparel visions to life with precision, quality, and reliability.',
-    image: '/images/001eef80d00d17511676d006c9f051c5.jpg',
     bullets: [
       'Flexible order quantities to support businesses at every stage',
       'Reliable production timelines with clear communication',

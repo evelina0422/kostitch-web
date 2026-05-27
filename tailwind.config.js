@@ -6,7 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        display: ['Oswald', 'sans-serif'],
+      },
       colors: {
+        cream: '#f8f6f1',
+        'brand-red': '#8f2a2a',
         // Brand theme colors
         dark: '#5A3E2B', // Primary brown (replaces black)
         light: '#FAF7F2', // Off-white background

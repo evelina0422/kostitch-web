@@ -50,8 +50,11 @@ export default function Navbar() {
     setIsOpen(false)
   }, [location])
 
+  const isHome = location.pathname === '/'
+  const showSolidNav = !isHome || isScrolled || isOpen
+
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#f8f6f1] shadow-md' : 'bg-[#f8f6f1]'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20">

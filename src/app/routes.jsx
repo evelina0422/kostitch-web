@@ -1,4 +1,4 @@
-import {createBrowserRouter, Outlet} from 'react-router-dom'
+import {createBrowserRouter, Outlet, useLocation} from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import Home from '../pages/Home'
@@ -8,10 +8,13 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 
 function Layout() {
+  const { pathname } = useLocation()
+  const isHome = pathname === '/'
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-20">
+      <main className={`flex-grow ${isHome ? '' : 'pt-20'}`}>
         <Outlet />
       </main>
       <Footer />
