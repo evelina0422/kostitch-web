@@ -51,12 +51,12 @@ export default function Navbar() {
   }, [location])
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#bf9f93]/70 shadow-md' : 'bg-[#bf9f93]/70 backdrop-blur-sm'
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-[#f8f6f1] shadow-md' : 'bg-[#f8f6f1]'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-20">
           <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt={siteConfig.companyName} className="h-[54px] w-auto" />
+            <img src="/logo.png" alt={siteConfig.companyName} className="h-[72px] w-auto" />
           </Link>
 
           {/* Desktop Nav */}
@@ -96,7 +96,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-[#bf9f93]/70 border-t border-border-line"
+            className="lg:hidden bg-[#f8f6f1] border-t border-border-line"
           >
             <div className="container-custom py-4 space-y-4">
               {navLinks.map((link) => (
