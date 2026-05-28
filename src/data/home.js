@@ -5,14 +5,8 @@ export const homeContent = {
   },
   hero: {
     headline: 'Custom Sewing for Every Industry',
-    bannerImage: '/images/hero-banner.png',
-    subheadline: 'From concept to delivery, we bring your apparel visions to life with precision, quality, and reliability.',
-    bullets: [
-      'Flexible order quantities to support businesses at every stage',
-      'Reliable production timelines with clear communication',
-      'End-to-end manufacturing support, from sampling to full production',
-      'Quality-driven workmanship with consistent in-house inspections',
-    ],
+    bannerImage: '/images/hero-tan.png',
+    ctaLabel: 'Get a Quote',
   },
   whyUs: {
     title: 'Why Choose Kostitch',
