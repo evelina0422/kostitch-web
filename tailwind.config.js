@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Oswald', 'sans-serif'],
+        sans: ['Poppins', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
       },
       colors: {
         cream: '#f8f6f1',

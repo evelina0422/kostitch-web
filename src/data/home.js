@@ -6,6 +6,7 @@ export const homeContent = {
   hero: {
     headline: 'Custom Sewing for Every Industry',
     bannerImage: '/images/hero-tan.png',
+    bannerImage2x: '/images/hero-tan@2x.png',
     ctaLabel: 'Get a Quote',
   },
   whyUs: {
