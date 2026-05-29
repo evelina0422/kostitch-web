@@ -21,16 +21,11 @@ export default function HomeCTA() {
           <p className="text-xl text-text-on-dark/90 mb-8 max-w-2xl mx-auto">
             Get a custom quote tailored to your needs. Our team is ready to bring your vision to life.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Link to="/contact">
               <Button size="lg" variant="secondary" className="bg-light text-accent hover:bg-beige">
                 Quote
                 <ArrowRight className="inline-block ml-2" size={20} />
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button size="lg" variant="outline" className="border-text-on-dark text-text-on-dark hover:bg-light/10">
-                Book a Call
               </Button>
             </Link>
           </div>

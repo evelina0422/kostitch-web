@@ -27,21 +27,23 @@ export default function HomeHero() {
   const { bannerImage, bannerImage2x, headlineLines } = homeContent.hero
 
   return (
-    <section className="relative w-full bg-light">
-      <img
-        src={bannerImage}
-        srcSet={`${bannerImage} 1x, ${bannerImage2x} 2x`}
-        sizes="100vw"
-        alt={headlineLines.join(' ')}
-        width={1024}
-        height={633}
-        className="w-full h-auto block"
-        fetchPriority="high"
-        decoding="async"
-      />
-      <div className="absolute inset-0 flex items-center">
-        <div className="container-custom w-full">
-          <HeroContent className="max-w-64 sm:max-w-md md:max-w-[56%] lg:max-w-xl" />
+    <section className="relative w-full bg-cream leading-[0]">
+      <div className="relative overflow-hidden">
+        <img
+          src={bannerImage}
+          srcSet={`${bannerImage} 1x, ${bannerImage2x} 2x`}
+          sizes="100vw"
+          alt={headlineLines.join(' ')}
+          width={1024}
+          height={528}
+          className="w-full h-auto block align-bottom"
+          fetchPriority="high"
+          decoding="async"
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="container-custom w-full">
+            <HeroContent className="max-w-64 sm:max-w-md md:max-w-[56%] lg:max-w-xl" />
+          </div>
         </div>
       </div>
     </section>

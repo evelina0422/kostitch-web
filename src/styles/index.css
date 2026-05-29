@@ -21,8 +21,7 @@
   
   body {
     color: var(--color-text-on-light);
-    @apply font-sans antialiased;
-    background-color: var(--color-light);
+    @apply font-sans antialiased bg-cream;
   }
 }
 

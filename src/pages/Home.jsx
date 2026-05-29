@@ -1,7 +1,7 @@
 import Seo from '../seo/Seo'
 import HomeHero from '../components/sections/HomeHero'
+import HomeProcess from '../components/sections/HomeProcess'
 import HomeWhyUs from '../components/sections/HomeWhyUs'
-import HomeCapabilities from '../components/sections/HomeCapabilities'
 import HomeCTA from '../components/sections/HomeCTA'
 import {homeContent} from '../data'
 
@@ -13,8 +13,8 @@ export default function Home() {
         description={homeContent.seo.description}
       />
       <HomeHero />
+      <HomeProcess />
       <HomeWhyUs />
-      <HomeCapabilities />
       <HomeCTA />
     </>
   )

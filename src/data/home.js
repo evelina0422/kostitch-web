@@ -5,12 +5,22 @@ export const homeContent = {
   },
   hero: {
     headlineLines: ['Custom Sewing', 'for Every Industry'],
-    bannerImage: '/images/hero-tan.png',
-    bannerImage2x: '/images/hero-tan@2x.png',
+    bannerImage: '/images/hero-tan.png?v=4',
+    bannerImage2x: '/images/hero-tan@2x.png?v=4',
     ctaLabel: 'Get a Quote',
   },
   whyUs: {
     title: 'How We Help',
+    images: [
+      {
+        src: '/images/how-we-help-1.png',
+        alt: 'Craftsperson working at an industrial sewing machine in the Kostitch workshop',
+      },
+      {
+        src: '/images/how-we-help-2.png',
+        alt: 'Close-up of hands operating a Singer industrial sewing machine',
+      },
+    ],
     items: [
       {
         title: 'CUSTOM PATTERN DEVELOPMENT',
@@ -36,6 +46,17 @@ export const homeContent = {
         title: 'Transparent Communication',
         description: 'Real-time updates, clear timelines, and responsive support throughout your project lifecycle.',
       },
+    ],
+  },
+  process: {
+    title: 'Our Process',
+    steps: [
+      'Consultation',
+      'Design & Development',
+      'Sample Creation',
+      'Approval',
+      'Production',
+      'Quality Inspection & Delivery',
     ],
   },
 }

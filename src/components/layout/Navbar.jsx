@@ -58,8 +58,8 @@ export default function Navbar() {
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-28">
-          <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt={siteConfig.companyName} className="h-[104px] w-auto" />
+          <Link to="/" className="flex items-center bg-transparent">
+            <img src="/logo.png" alt={siteConfig.companyName} className="h-[104px] w-auto bg-transparent object-contain" />
           </Link>
 
           {/* Desktop Nav */}

@@ -12,9 +12,9 @@ function Layout() {
   const isHome = pathname === '/'
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
       <Navbar />
-      <main className={`flex-grow ${isHome ? '' : 'pt-20'}`}>
+      <main className={`flex-grow ${isHome ? 'bg-cream' : 'pt-20'}`}>
         <Outlet />
       </main>
       <Footer />

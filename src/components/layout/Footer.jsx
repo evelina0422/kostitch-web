@@ -16,21 +16,26 @@ const footerLinks = {
   ],
 }
 
+const paperBackground = {
+  backgroundImage: 'url(/images/hero-paper-tile.png?v=2)',
+  backgroundSize: '360px 440px',
+}
+
 export default function Footer() {
   return (
-    <footer className="bg-dark text-text-on-dark">
+    <footer className="bg-cream text-black bg-repeat" style={paperBackground}>
       <div className="container-custom py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div>
-            <Link to="/" className="inline-block mb-4">
+            <Link to="/" className="inline-block mb-4 bg-transparent">
               <img
                 src="/logo.png"
                 alt={siteConfig.companyName}
-                className="h-14 md:h-16 w-auto max-w-[280px] md:max-w-[320px] hover:opacity-80 transition-opacity"
+                className="h-14 md:h-16 w-auto max-w-[280px] md:max-w-[320px] bg-transparent object-contain hover:opacity-80 transition-opacity"
               />
             </Link>
-            <p className="text-text-on-dark/80 mb-4">{siteConfig.tagline}</p>
+            <p className="text-black/80 mb-4">{siteConfig.tagline}</p>
             <div className="space-y-2 text-sm">
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mt-1 mr-2 flex-shrink-0" />
@@ -55,7 +60,7 @@ export default function Footer() {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-text-on-dark font-semibold mb-4">Company</h4>
+            <h4 className="text-black font-semibold mb-4">Company</h4>
             <ul className="space-y-2">
               {footerLinks.company.map((link) => (
                 <li key={link.path}>
@@ -69,7 +74,7 @@ export default function Footer() {
 
           {/* Services Links */}
           <div>
-            <h4 className="text-text-on-dark font-semibold mb-4">Services</h4>
+            <h4 className="text-black font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {footerLinks.services.map((link, index) => (
                 <li key={`${link.path}-${index}`}>
@@ -83,13 +88,13 @@ export default function Footer() {
 
           {/* Social & CTA */}
           <div>
-            <h4 className="text-text-on-dark font-semibold mb-4">Connect</h4>
+            <h4 className="text-black font-semibold mb-4">Connect</h4>
             <div className="flex flex-wrap gap-3 mb-6">
               <a
                 href={siteConfig.social.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin size={20} />
@@ -98,7 +103,7 @@ export default function Footer() {
                 href={siteConfig.social.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -107,7 +112,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook size={20} />
@@ -117,7 +122,7 @@ export default function Footer() {
                   href={siteConfig.social.tiktok}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                   aria-label="TikTok"
                 >
                   <SiTiktok size={20} />
@@ -128,7 +133,7 @@ export default function Footer() {
                   href={siteConfig.social.youtube}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                   aria-label="YouTube"
                 >
                   <SiYoutube size={20} />
@@ -139,7 +144,7 @@ export default function Footer() {
                   href={siteConfig.social.pinterest}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 flex items-center justify-center border border-text-on-dark/30 rounded-lg hover:border-accent hover:text-accent transition-colors"
+                  className="w-10 h-10 flex items-center justify-center rounded-lg hover:text-accent transition-colors"
                   aria-label="Pinterest"
                 >
                   <SiPinterest size={20} />
@@ -154,7 +159,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-text-on-dark/30 mt-12 pt-8 text-center text-sm text-text-on-dark/70">
+        <div className="mt-12 pt-8 text-center text-sm text-black/70">
           <p>&copy; {new Date().getFullYear()} {siteConfig.companyName}. All rights reserved.</p>
         </div>
       </div>
