@@ -4,7 +4,7 @@ export const homeContent = {
     description: 'Professional garment manufacturing services from concept to delivery. Cut & sew, sampling, bulk production, and quality control for fashion brands worldwide.',
   },
   hero: {
-    headline: 'Custom Sewing for Every Industry',
+    headlineLines: ['Custom Sewing', 'for Every Industry'],
     bannerImage: '/images/hero-tan.png',
     bannerImage2x: '/images/hero-tan@2x.png',
     ctaLabel: 'Get a Quote',
