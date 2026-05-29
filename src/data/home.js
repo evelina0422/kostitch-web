@@ -10,27 +10,27 @@ export const homeContent = {
     ctaLabel: 'Get a Quote',
   },
   whyUs: {
-    title: 'Why Choose Kostitch',
+    title: 'How We Help',
     items: [
       {
-        title: 'Proven Track Record',
-        description: 'Over 15 years of experience serving fashion brands, retailers, and private label clients worldwide.',
+        title: 'CUSTOM PATTERN DEVELOPMENT',
+        description: 'Transform ideas into production-ready patterns.',
       },
       {
-        title: 'End-to-End Service',
-        description: 'From pattern making and sampling to bulk production, packaging, and shipping—we handle it all.',
+        title: 'DESIGN SUPPORT',
+        description: 'Refine concepts, technical details, and specifications.',
       },
       {
         title: 'Quality Assurance',
-        description: 'Rigorous QC at every stage. ISO certified processes ensure consistent, premium quality output.',
+        description: 'Carefully inspected for quality at every stage',
       },
       {
         title: 'Flexible Production',
-        description: 'Accommodate orders from 500 to 100,000+ units. Scalable capacity to match your growth.',
+        description: 'Scalable capacity to match your growth.',
       },
       {
-        title: 'Global Materials Network',
-        description: 'Access to premium fabrics and materials worldwide. We source the best for your products.',
+        title: 'Functional Modifications',
+        description: 'Industry-specific features, reinforcements, and performance upgrades.',
       },
       {
         title: 'Transparent Communication',

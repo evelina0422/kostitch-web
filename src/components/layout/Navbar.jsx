@@ -57,18 +57,18 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-28">
           <Link to="/" className="flex items-center">
-            <img src="/logo.png" alt={siteConfig.companyName} className="h-[72px] w-auto" />
+            <img src="/logo.png" alt={siteConfig.companyName} className="h-[104px] w-auto" />
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors ${location.pathname === link.path
+                className={`text-lg font-medium transition-colors ${location.pathname === link.path
                   ? 'text-accent'
                   : 'text-text-on-light hover:text-accent'
                   }`}
@@ -77,7 +77,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link to="/contact">
-              <Button size="sm">Quote</Button>
+              <Button>Quote</Button>
             </Link>
           </div>
 

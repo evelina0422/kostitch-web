@@ -1,7 +1,7 @@
-export default function SectionHeader({title, subtitle, className = ''}) {
+export default function SectionHeader({title, subtitle, className = '', titleClassName = ''}) {
   return (
     <div className={`text-center mb-12 ${className}`}>
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-light mb-4">
+      <h2 className={`font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-light mb-4 ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (

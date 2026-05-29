@@ -7,9 +7,9 @@ function HeroContent({ className = '' }) {
 
   return (
     <div className={className}>
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold uppercase tracking-wide text-text-on-light leading-tight mb-8">
-        {headlineLines.map((line, index) => (
-          <span key={line} className={index > 0 ? 'block' : undefined}>
+      <h1 className="flex flex-col text-2xl sm:text-3xl lg:text-4xl font-bold uppercase tracking-wide text-text-on-light leading-tight mb-8">
+        {headlineLines.map((line) => (
+          <span key={line} className="block">
             {line}
           </span>
         ))}
@@ -41,7 +41,7 @@ export default function HomeHero() {
       />
       <div className="absolute inset-0 flex items-center">
         <div className="container-custom w-full">
-          <HeroContent className="max-w-[11rem] sm:max-w-xs md:max-w-[46%] lg:max-w-md" />
+          <HeroContent className="max-w-64 sm:max-w-md md:max-w-[56%] lg:max-w-xl" />
         </div>
       </div>
     </section>
