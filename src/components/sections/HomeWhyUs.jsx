@@ -59,7 +59,7 @@ export default function HomeWhyUs() {
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{delay: 0.25, duration: 0.6}}
-              className="absolute -bottom-12 right-0 z-20 w-[78%] overflow-hidden rounded-3xl shadow-lg"
+              className="absolute -bottom-20 right-0 z-20 w-[78%] overflow-hidden rounded-3xl shadow-lg"
             >
               <img
                 src={images[1].src}
