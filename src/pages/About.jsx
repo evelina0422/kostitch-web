@@ -1,7 +1,6 @@
 import {motion} from 'framer-motion'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
-import SectionHeader from '../components/ui/SectionHeader'
 import {Check} from 'lucide-react'
 import {aboutContent} from '../data'
 
@@ -15,10 +14,6 @@ export default function About() {
       <section className="pt-16 pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <SectionHeader
-              title={aboutContent.title}
-              subtitle={aboutContent.subtitle}
-            />
             <div className="prose prose-lg max-w-none mb-12">
               {aboutContent.paragraphs.map((paragraph, index) => (
                 <p key={index} className="text-text-on-light/70 leading-relaxed mb-6">
