@@ -35,7 +35,7 @@ export default function HomeWhyUs() {
             ))}
           </div>
 
-          <div className="order-1 lg:order-2 relative mx-auto w-full max-w-[280px] sm:max-w-[300px] xl:max-w-[320px] min-h-[280px] sm:min-h-[340px] lg:min-h-[400px] lg:sticky lg:top-28">
+          <div className="order-1 lg:order-2 relative mx-auto w-full max-w-[280px] sm:max-w-[300px] xl:max-w-[320px] min-h-[280px] sm:min-h-[340px] lg:min-h-[400px]">
             <motion.div
               initial={{opacity: 0, y: 16}}
               whileInView={{opacity: 1, y: 0}}

@@ -10,6 +10,9 @@ import Contact from '../pages/Contact'
 function Layout() {
   const { pathname } = useLocation()
   const isHome = pathname === '/'
+  const isAbout = pathname === '/about'
+  const isPortfolio = pathname === '/portfolio'
+  const isServices = pathname === '/capabilities'
 
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
@@ -17,7 +20,7 @@ function Layout() {
       <main className={`flex-grow ${isHome ? 'bg-cream' : 'pt-20'}`}>
         <Outlet />
       </main>
-      <Footer />
+      <Footer paper={!isAbout && !isPortfolio && !isServices} />
     </div>
   )
 }

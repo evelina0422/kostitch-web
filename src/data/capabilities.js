@@ -3,7 +3,7 @@ export const capabilitiesContent = {
     title: 'Our Capabilities - Kostitch',
     description: 'Comprehensive garment manufacturing capabilities including cut & sew, pattern making, sampling, bulk production, embroidery, and more.',
   },
-  title: 'Our Manufacturing Capabilities',
+  title: 'Our Manufacturing Services',
   subtitle: 'From design to delivery, we offer end-to-end garment manufacturing services',
   items: [
     {
