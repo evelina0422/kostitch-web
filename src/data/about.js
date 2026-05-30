@@ -6,10 +6,9 @@ export const aboutContent = {
   title: 'About Kostitch',
   subtitle: 'Your trusted partner in garment manufacturing',
   paragraphs: [
-    'With over 5 years of experience in garment manufacturing, Kostitch supports businesses across the United States with dependable, production-driven apparel solutions. We specialize in turning designs into durable, high-quality garments built to perform in real-world environments.',
-    'Our production capabilities are designed to handle everything from small sampling runs to high-volume manufacturing. Backed by skilled technicians and streamlined processes, we deliver consistent results while meeting strict quality, timeline, and compliance requirements.',
-    'We work with a broad range of industries, including fashion brands, corporate and workforce uniforms, athleisure, janitorial and maintenance apparel, private label programs, promotional products, healthcare and medical wear, construction and industrial workwear, hospitality and food services, education and institutions, and security and law enforcement.',
-    'At Kostitch, we operate as a manufacturing partner, not just a vendor. We prioritize clear communication, repeatable quality, and on-time delivery to support long-term, scalable partnerships.',
+    'Kostitch was founded by Evelina and Kameron with a simple goal: to provide businesses with dependable, high-quality garment manufacturing backed by experience, craftsmanship, and genuine relationships.',
+    'Together, we bring nearly two decades of hands-on experience in sewing, pattern development, garment construction, and production. Our passion for the industry began long before Kostitch was established. Coming from families involved in fashion and apparel manufacturing, we grew up around the skills, techniques, and values that continue to shape our work today.',
+    'What started as a shared appreciation for quality craftsmanship evolved into a company dedicated to helping organizations develop and manufacture garments that are functional, durable, and built to meet real-world demands.',
   ],
   values: [
     'Quality First: Every garment meets our rigorous standards',
