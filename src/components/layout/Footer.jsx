@@ -32,7 +32,7 @@ export default function Footer() {
               <img
                 src="/logo.png"
                 alt={siteConfig.companyName}
-                className="h-14 md:h-16 w-auto max-w-[280px] md:max-w-[320px] bg-transparent object-contain hover:opacity-80 transition-opacity"
+                className="h-28 md:h-36 w-auto max-w-[400px] md:max-w-[480px] bg-transparent object-contain hover:opacity-80 transition-opacity"
               />
             </Link>
             <p className="text-black/80 mb-4">{siteConfig.tagline}</p>
