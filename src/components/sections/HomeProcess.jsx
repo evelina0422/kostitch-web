@@ -22,7 +22,7 @@ export default function HomeProcess() {
   const {title, subtitle, steps} = homeContent.process
 
   return (
-    <section className="pt-[26rem] md:pt-[37rem] pb-16 md:pb-20 bg-cream bg-repeat" style={paperBackground}>
+    <section className="pt-[9rem] md:pt-[12rem] pb-16 md:pb-20 bg-cream bg-repeat" style={paperBackground}>
       <Container>
         <SectionHeader
           title={title}
