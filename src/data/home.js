@@ -50,13 +50,32 @@ export const homeContent = {
   },
   process: {
     title: 'Our Process',
+    subtitle: 'From first conversation to final delivery, a clear path for your product.',
     steps: [
-      'Consultation',
-      'Design & Development',
-      'Sample Creation',
-      'Approval',
-      'Production',
-      'Quality Inspection & Delivery',
+      {
+        label: 'Consultation',
+        description: 'We learn your goals, specs, and timeline.',
+      },
+      {
+        label: 'Design & Development',
+        description: 'Patterns and tech packs built for production.',
+      },
+      {
+        label: 'Sample Creation',
+        description: 'Pre-production samples refined to perfection.',
+      },
+      {
+        label: 'Approval',
+        description: 'You review and sign off before we scale.',
+      },
+      {
+        label: 'Production',
+        description: 'Bulk manufacturing with quality checkpoints.',
+      },
+      {
+        label: 'Quality Inspection & Delivery',
+        description: 'Final checks, then carefully packaged and shipped.',
+      },
     ],
   },
 }
