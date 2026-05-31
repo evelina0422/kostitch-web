@@ -6,6 +6,8 @@ import Capabilities from '../pages/Capabilities'
 import Portfolio from '../pages/Portfolio'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
+import Blog from '../pages/Blog'
+import BlogPost from '../pages/BlogPost'
 
 function Layout() {
   const { pathname } = useLocation()
@@ -13,6 +15,7 @@ function Layout() {
   const isAbout = pathname === '/about'
   const isPortfolio = pathname === '/portfolio'
   const isServices = pathname === '/capabilities'
+  const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
 
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
@@ -20,7 +23,7 @@ function Layout() {
       <main className={`flex-grow ${isHome || isAbout ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
         <Outlet />
       </main>
-      <Footer paper={!isAbout && !isPortfolio && !isServices} />
+      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog} />
     </div>
   )
 }
@@ -44,6 +47,14 @@ export const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />,
+      },
+      {
+        path: '/blog',
+        element: <Blog />,
+      },
+      {
+        path: '/blog/:slug',
+        element: <BlogPost />,
       },
       {
         path: '/contact',

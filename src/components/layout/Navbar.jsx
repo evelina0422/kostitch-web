@@ -8,6 +8,7 @@ import { siteConfig } from '../../data/siteConfig'
 const navLinks = [
   { path: '/capabilities', label: 'Services' },
   { path: '/portfolio', label: 'Portfolio' },
+  { path: '/blog', label: 'Blog' },
   { path: '/about', label: 'About Us' },
 ]
 
