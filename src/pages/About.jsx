@@ -17,7 +17,7 @@ export default function About() {
           src="/images/about-sewing-machine.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute inset-y-0 left-1/2 -translate-x-1/2 -z-10 h-full w-full max-w-5xl object-cover object-center"
+          className="pointer-events-none select-none absolute inset-y-0 left-1/2 -translate-x-1/2 -z-10 h-full w-full max-w-6xl object-cover object-center"
         />
       <section className="pt-[11.25rem] pb-20">
         <Container>
