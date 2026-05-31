@@ -50,8 +50,9 @@ export default function Navbar() {
     setIsOpen(false)
   }, [location])
 
-  const isHome = location.pathname === '/'
-  const showSolidNav = !isHome || isScrolled || isOpen
+  const isAbout = location.pathname === '/about'
+  const showSolidNav = isAbout ? isOpen : isScrolled || isOpen
+  const lightText = !showSolidNav && isAbout
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
@@ -70,7 +71,9 @@ export default function Navbar() {
                 to={link.path}
                 className={`text-lg font-medium transition-colors ${location.pathname === link.path
                   ? 'text-accent'
-                  : 'text-text-on-light hover:text-accent'
+                  : lightText
+                    ? 'text-white hover:text-accent'
+                    : 'text-text-on-light hover:text-accent'
                   }`}
               >
                 {link.label}
@@ -84,7 +87,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 text-text-on-light"
+            className={`lg:hidden p-2 ${lightText ? 'text-white' : 'text-text-on-light'}`}
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}

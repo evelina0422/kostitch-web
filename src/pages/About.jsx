@@ -12,12 +12,21 @@ export default function About() {
         title={aboutContent.seo.title}
         description={aboutContent.seo.description}
       />
+      <div className="relative isolate overflow-hidden">
+        <img
+          src="/images/about-sewing-machine.png"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none select-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
+        />
       <section className="pt-[11.25rem] pb-20">
         <Container>
           <div className="max-w-4xl mx-auto">
             <SectionHeader
               title={aboutContent.title}
               subtitle={aboutContent.subtitle}
+              titleClassName="!text-white"
+              subtitleClassName="!text-white/80"
             />
             <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 mt-40 mb-32">
               <div className="w-full md:w-1/3">
@@ -26,18 +35,18 @@ export default function About() {
                   alt="Kameron Tate at the Kostitch workshop"
                   className="w-full max-w-[250px] h-auto object-cover"
                 />
-                <h3 className="font-sans text-base md:text-lg font-bold uppercase tracking-wide text-text-on-light mt-6 mb-3 max-w-[250px]">
+                <h3 className="font-sans text-base md:text-lg font-bold uppercase tracking-wide text-white mt-6 mb-3 max-w-[250px]">
                   {aboutContent.portraitName}
                 </h3>
-                <p className="text-sm text-text-on-light/70 leading-relaxed max-w-[250px]">
+                <p className="text-sm text-white/80 leading-relaxed max-w-[250px]">
                   {aboutContent.portraitBio}
                 </p>
               </div>
               <div className="w-full md:w-2/3 text-right self-start">
-                <h2 className="font-sans text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wide text-text-on-light mb-4 max-w-[26ch] ml-auto whitespace-pre-line">
+                <h2 className="font-sans text-lg md:text-xl lg:text-2xl font-bold uppercase tracking-wide text-white mb-4 max-w-[26ch] ml-auto whitespace-pre-line">
                   {aboutContent.headline}
                 </h2>
-                <p className="text-base text-text-on-light/70 leading-relaxed max-w-[26ch] ml-auto">
+                <p className="text-base text-white/80 leading-relaxed max-w-[26ch] ml-auto">
                   {aboutContent.intro}
                 </p>
               </div>
@@ -45,7 +54,7 @@ export default function About() {
             <div className="flex flex-col md:flex-row items-start gap-8 md:gap-12 mb-12">
               <div className="prose prose-lg max-w-sm text-left">
                 {aboutContent.paragraphs.map((paragraph, index) => (
-                  <p key={index} className="text-text-on-light/70 leading-relaxed mb-6">
+                  <p key={index} className="text-white/80 leading-relaxed mb-6">
                     {paragraph}
                   </p>
                 ))}
@@ -57,10 +66,10 @@ export default function About() {
                   alt="Kostitch co-founder Evelina Rudenko"
                   className="w-full max-w-[250px] h-auto object-cover"
                 />
-                <h3 className="font-sans text-base md:text-lg font-bold uppercase tracking-wide text-text-on-light mt-6 mb-3 max-w-[250px]">
+                <h3 className="font-sans text-base md:text-lg font-bold uppercase tracking-wide text-white mt-6 mb-3 max-w-[250px]">
                   {aboutContent.portraitName2}
                 </h3>
-                <p className="text-sm text-text-on-light/70 leading-relaxed max-w-[250px]">
+                <p className="text-sm text-white/80 leading-relaxed max-w-[250px]">
                   {aboutContent.portraitBio2}
                 </p>
               </div>
@@ -99,8 +108,8 @@ export default function About() {
       <section className="pt-80 pb-80">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold text-text-on-light mb-6">Our Values</h3>
+            <div className="mb-12 max-w-sm md:-ml-16 lg:-ml-24 -mt-16">
+              <h3 className="text-2xl font-bold text-black mb-6">Our Values</h3>
               <ul className="space-y-4">
                 {aboutContent.values.map((value, index) => (
                   <motion.li
@@ -112,7 +121,7 @@ export default function About() {
                     className="flex items-start"
                   >
                     <Check className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-text-on-light text-base">{value}</span>
+                    <span className="text-black text-base">{value}</span>
                   </motion.li>
                 ))}
               </ul>
@@ -121,6 +130,7 @@ export default function About() {
           </div>
         </Container>
       </section>
+      </div>
     </>
   )
 }

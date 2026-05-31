@@ -17,7 +17,7 @@ function Layout() {
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
       <Navbar />
-      <main className={`flex-grow ${isHome ? 'bg-cream' : 'pt-20'}`}>
+      <main className={`flex-grow ${isHome || isAbout ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
         <Outlet />
       </main>
       <Footer paper={!isAbout && !isPortfolio && !isServices} />
