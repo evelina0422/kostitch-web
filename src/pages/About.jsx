@@ -12,12 +12,12 @@ export default function About() {
         title={aboutContent.seo.title}
         description={aboutContent.seo.description}
       />
-      <div className="relative isolate overflow-hidden">
+      <div className="relative isolate overflow-hidden bg-cream">
         <img
           src="/images/about-sewing-machine.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute inset-0 -z-10 h-full w-full object-cover object-center"
+          className="pointer-events-none select-none absolute inset-y-0 left-1/2 -translate-x-1/2 -z-10 h-full w-full max-w-5xl object-cover object-center"
         />
       <section className="pt-[11.25rem] pb-20">
         <Container>
@@ -78,7 +78,7 @@ export default function About() {
         </Container>
       </section>
 
-      <section className="bg-[#bd1504] py-16 md:py-24">
+      <section className="bg-[#bd1504] py-8 md:py-12">
         <Container>
           <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-12">
             <div className="w-full md:w-2/5 flex justify-center">
