@@ -1,11 +1,12 @@
-export default function SectionHeader({title, subtitle, className = '', titleClassName = '', subtitleClassName = ''}) {
+export default function SectionHeader({title, subtitle, align = 'center', className = '', titleClassName = '', titleSizeClassName = 'text-3xl md:text-4xl lg:text-5xl', subtitleClassName = ''}) {
+  const isLeft = align === 'left'
   return (
-    <div className={`text-center mb-12 ${className}`}>
-      <h2 className={`font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-light mb-4 ${titleClassName}`}>
+    <div className={`${isLeft ? 'text-left' : 'text-center'} mb-12 ${className}`}>
+      <h2 className={`font-sans ${titleSizeClassName} font-bold text-text-on-light mb-4 ${titleClassName}`}>
         {title}
       </h2>
       {subtitle && (
-        <p className={`text-lg md:text-xl text-text-on-light/70 max-w-3xl mx-auto ${subtitleClassName}`}>
+        <p className={`text-lg md:text-xl text-text-on-light/70 max-w-3xl ${isLeft ? '' : 'mx-auto'} ${subtitleClassName}`}>
           {subtitle}
         </p>
       )}

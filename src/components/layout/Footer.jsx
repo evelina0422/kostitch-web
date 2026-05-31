@@ -27,7 +27,7 @@ export default function Footer({ paper = true }) {
       className="bg-cream text-black bg-repeat"
       style={paper ? paperBackground : undefined}
     >
-      <div className="container-custom py-12 md:py-16">
+      <div className="container-custom pt-48 md:pt-64 pb-12 md:pb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div>

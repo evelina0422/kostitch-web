@@ -9,6 +9,8 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
         display: ['Poppins', 'sans-serif'],
+        script: ['"Great Vibes"', 'cursive'],
+        magnolia: ['"Yellowtail"', 'cursive'],
       },
       colors: {
         cream: '#f8f6f1',

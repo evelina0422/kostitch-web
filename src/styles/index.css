@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Magnolia Script';
+  src: url('/fonts/MagnoliaScript.woff2') format('woff2'),
+    url('/fonts/MagnoliaScript.woff') format('woff'),
+    url('/fonts/MagnoliaScript.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   :root {
     /* Brand theme variables */
@@ -27,6 +37,6 @@
 
 @layer components {
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 xl:px-32;
   }
 }

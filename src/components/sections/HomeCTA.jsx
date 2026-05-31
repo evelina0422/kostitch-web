@@ -6,7 +6,7 @@ import Container from '../layout/Container'
 
 export default function HomeCTA() {
   return (
-    <section className="py-20 bg-accent">
+    <section className="py-12 bg-accent">
       <Container>
         <motion.div
           initial={{opacity: 0, y: 20}}
@@ -15,10 +15,10 @@ export default function HomeCTA() {
           transition={{duration: 0.6}}
           className="text-center"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-dark mb-6">
+          <h2 className="font-magnolia text-5xl md:text-6xl lg:text-7xl font-bold text-text-on-dark mb-6">
             Ready to Start Your Project?
           </h2>
-          <p className="text-xl text-text-on-dark/90 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-text-on-dark/90 mb-8 max-w-md mx-auto">
             Get a custom quote tailored to your needs. Our team is ready to bring your vision to life.
           </p>
           <div className="flex justify-center">
