@@ -10,10 +10,10 @@ export const aboutContent = {
     'Founded by Evelina Rudenko and Kameron Tate, Kostitch was created from a shared passion for garment manufacturing, craftsmanship, and helping businesses bring quality apparel solutions to life.',
   portraitName: 'Kameron Tate',
   portraitBio:
-    'Brings over 7 years of experience in garment production, with a strong background in garment construction and manufacturing processes. His attention to precision, consistency, and product quality helps ensure that every project meets the highest standards from development through production.',
+    'For more than 7 years, he has worked in garment production and sewing shop management, building hands-on expertise in garment construction and tailoring. Known for his attention to detail and commitment to quality, he helps ensure that every project runs smoothly and meets high standards from start to finish.',
   portraitName2: 'Evelina Rudenko',
   portraitBio2:
-    'Brings over 12 years of experience in sewing and garment manufacturing, combining technical knowledge with a strong focus on business development and client relationships. She is passionate about delivering quality solutions, driving innovation, and building long-term partnerships based on trust, communication, and exceptional service.',
+    'With over 12 years of experience in sewing, garment production, and fabrics, she brings both technical expertise and a strong understanding of client needs. She is passionate about delivering high-quality solutions, building meaningful relationships, and helping clients turn their ideas into successful products through trust, communication, and exceptional service.',
   philosophy: {
     title: 'Our Philosophy',
     quote:
