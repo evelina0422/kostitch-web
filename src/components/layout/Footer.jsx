@@ -9,11 +9,8 @@ const footerLinks = {
     { path: '/capabilities', label: 'Services' },
     { path: '/portfolio', label: 'Portfolio' },
     { path: '/blog', label: 'Blog' },
-  ],
-  services: [
-    { path: '/contact', label: 'Contact' },
+    { path: '/careers', label: 'Careers' },
     { path: '/contact', label: 'Quote' },
-    { path: '/contact', label: 'Book a Call' },
   ],
 }
 
@@ -76,22 +73,8 @@ export default function Footer({ paper = true }) {
             </ul>
           </div>
 
-          {/* Services Links */}
-          <div>
-            <h4 className="text-black font-semibold mb-4">Services</h4>
-            <ul className="space-y-2">
-              {footerLinks.services.map((link, index) => (
-                <li key={`${link.path}-${index}`}>
-                  <Link to={link.path} className="text-sm hover:text-accent transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Social & CTA */}
-          <div>
+          <div className="lg:col-start-4">
             <h4 className="text-black font-semibold mb-4">Connect</h4>
             <div className="flex flex-wrap gap-3 mb-6">
               <a

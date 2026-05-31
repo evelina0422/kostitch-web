@@ -8,6 +8,7 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
+import Careers from '../pages/Careers'
 
 function Layout() {
   const { pathname } = useLocation()
@@ -55,6 +56,10 @@ export const router = createBrowserRouter([
       {
         path: '/blog/:slug',
         element: <BlogPost />,
+      },
+      {
+        path: '/careers',
+        element: <Careers />,
       },
       {
         path: '/contact',
