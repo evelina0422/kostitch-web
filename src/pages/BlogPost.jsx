@@ -76,7 +76,7 @@ export default function BlogPost() {
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="bg-light aspect-[16/9] overflow-hidden rounded-lg border border-border-line mb-12"
+            className="bg-light aspect-[16/9] overflow-hidden border border-border-line mb-12"
           >
             <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
           </motion.div>
@@ -112,7 +112,7 @@ export default function BlogPost() {
               {relatedPosts.map((related) => (
                 <article
                   key={related.slug}
-                  className="bg-beige rounded-lg overflow-hidden border border-border-line hover:shadow-lg transition-all flex flex-col"
+                  className="bg-beige overflow-hidden border border-border-line hover:shadow-lg transition-all flex flex-col"
                 >
                   <Link to={`/blog/${related.slug}`} className="block">
                     <div className="bg-light aspect-[16/10] overflow-hidden border-b border-border-line">

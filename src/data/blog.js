@@ -3,7 +3,7 @@ export const blogContent = {
     title: 'Blog - Kostitch',
     description: 'Insights, trends, and expertise from Kostitch on garment manufacturing, apparel production, sustainability, and bringing fashion ideas to life.',
   },
-  title: 'The Kostitch Journal',
+  title: 'Kostitch Journal',
   subtitle: 'Insights on garment manufacturing, production trends, and bringing your apparel vision to life',
   posts: [
     {
