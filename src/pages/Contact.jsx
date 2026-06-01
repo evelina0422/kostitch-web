@@ -139,41 +139,41 @@ export default function Contact() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
             <div className="h-full">
-              <div className="bg-beige p-8 h-full">
-                <h3 className="text-xl font-bold text-text-on-light mb-6">Contact Information</h3>
+              <div className="bg-[#720e0c] p-8 h-full text-[#f8f6f1]">
+                <h3 className="text-xl font-bold text-[#f8f6f1] mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <MapPin className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 text-[#f8f6f1] mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-text-on-light mb-1">Address</div>
-                      <div className="text-text-on-light/70">
+                      <div className="font-semibold text-[#f8f6f1] mb-1">Address</div>
+                      <div className="text-[#f8f6f1]/80">
                         {siteConfig.address.street}<br />
                         {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Phone className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 text-[#f8f6f1] mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-text-on-light mb-1">Phone</div>
-                      <a href={`tel:${siteConfig.phone}`} className="text-text-on-light/70 hover:text-accent transition-colors">
+                      <div className="font-semibold text-[#f8f6f1] mb-1">Phone</div>
+                      <a href={`tel:${siteConfig.phone}`} className="text-[#f8f6f1]/80 hover:text-white transition-colors">
                         {siteConfig.phone}
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 text-[#f8f6f1] mr-4 flex-shrink-0 mt-1" />
                     <div>
-                      <div className="font-semibold text-text-on-light mb-1">Email</div>
-                      <a href={`mailto:${siteConfig.email}`} className="text-text-on-light/70 hover:text-accent transition-colors">
+                      <div className="font-semibold text-[#f8f6f1] mb-1">Email</div>
+                      <a href={`mailto:${siteConfig.email}`} className="text-[#f8f6f1]/80 hover:text-white transition-colors">
                         {siteConfig.email}
                       </a>
                     </div>
                   </div>
                 </div>
 
-                <h3 className="text-xl font-bold text-text-on-light mb-4 mt-12 pt-8">Business Hours</h3>
-                <div className="space-y-2 text-text-on-light">
+                <h3 className="text-xl font-bold text-[#f8f6f1] mb-4 mt-12 pt-8">Business Hours</h3>
+                <div className="space-y-2 text-[#f8f6f1]">
                   {siteConfig.businessHours.map((schedule, index) => (
                     <div key={index} className="flex justify-between">
                       <span>{schedule.days}</span>
@@ -199,8 +199,8 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-beige p-8">
-                  <h3 className="text-xl font-bold text-text-on-light mb-6">Quote</h3>
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-[#720e0c] p-8 text-[#f8f6f1] [&_label]:text-[#f8f6f1] [&_input]:bg-[#f8f6f1] [&_input]:text-text-on-light [&_textarea]:bg-[#f8f6f1] [&_textarea]:text-text-on-light">
+                  <h3 className="text-xl font-bold text-[#f8f6f1] mb-6">Quote</h3>
 
                   <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
@@ -287,7 +287,7 @@ export default function Contact() {
                     />
 
                     <div>
-                      <label className="block text-sm font-medium text-text-on-light mb-2">
+                      <label className="block text-sm font-medium text-[#f8f6f1] mb-2">
                         File Upload (Optional)
                       </label>
                       <div
@@ -299,12 +299,12 @@ export default function Contact() {
                           : 'border-border-line'
                           }`}
                       >
-                        <p className="text-text-on-light/60 text-sm mb-2">
+                        <p className="text-[#f8f6f1]/70 text-sm mb-2">
                           {isDragging
                             ? 'Drop files here...'
                             : 'Drag & drop files here, or click to select'}
                         </p>
-                        <p className="text-text-on-light/40 text-xs mb-3">
+                        <p className="text-[#f8f6f1]/50 text-xs mb-3">
                           PDF, JPG, PNG, DOC, DOCX
                         </p>
                         <input
@@ -317,18 +317,18 @@ export default function Contact() {
                         />
                         <label
                           htmlFor="file-upload"
-                          className="inline-block cursor-pointer bg-beige text-text-on-light px-4 py-2 rounded-lg hover:bg-border-line transition-colors text-sm"
+                          className="inline-block cursor-pointer bg-[#f8f6f1] !text-text-on-light px-4 py-2 rounded-lg hover:bg-white transition-colors text-sm"
                         >
                           Choose Files
                         </label>
                         {selectedFiles.length > 0 && (
                           <div className="mt-4 text-left">
-                            <p className="text-text-on-light/70 text-sm font-semibold mb-2">
+                            <p className="text-[#f8f6f1]/80 text-sm font-semibold mb-2">
                               Selected files ({selectedFiles.length}):
                             </p>
                             <ul className="space-y-1">
                               {selectedFiles.map((file, index) => (
-                                <li key={index} className="text-text-on-light/60 text-xs">
+                                <li key={index} className="text-[#f8f6f1]/70 text-xs">
                                   📎 {file.name} ({(file.size / 1024).toFixed(1)} KB)
                                 </li>
                               ))}
