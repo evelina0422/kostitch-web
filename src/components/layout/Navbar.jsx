@@ -59,9 +59,9 @@ export default function Navbar() {
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
-        <div className="flex items-center justify-between h-28">
+        <div className="flex items-center justify-between h-20 lg:h-28">
           <Link to="/" className="flex items-center bg-transparent">
-            <img src="/logo.png" alt={siteConfig.companyName} className="h-[104px] w-auto bg-transparent object-contain" />
+            <img src="/logo.png" alt={siteConfig.companyName} className="h-16 w-auto bg-transparent object-contain lg:h-[104px]" />
           </Link>
 
           {/* Desktop Nav */}

@@ -22,7 +22,7 @@ export default function HomeProcess() {
   const {title, subtitle, steps} = homeContent.process
 
   return (
-    <section className="pt-[13rem] md:pt-[17rem] pb-16 md:pb-20 bg-cream bg-repeat" style={paperBackground}>
+    <section className="pt-20 md:pt-28 lg:pt-[17rem] pb-16 md:pb-20 bg-cream bg-repeat" style={paperBackground}>
       <Container>
         <SectionHeader
           title={title}
@@ -79,7 +79,7 @@ export default function HomeProcess() {
         </div>
 
         {/* Mobile / tablet: stacked cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 lg:hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:hidden">
           {steps.map((step, index) => {
             const Icon = processIcons[index]
             const stepNumber = String(index + 1).padStart(2, '0')

@@ -15,7 +15,7 @@ export default function HomeCTA() {
           transition={{duration: 0.6}}
           className="text-center"
         >
-          <h2 className="font-monsieur text-6xl md:text-7xl lg:text-8xl text-text-on-dark mb-6">
+          <h2 className="font-monsieur text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-tight text-text-on-dark mb-6 px-2">
             Ready to Start Your Project?
           </h2>
           <p className="text-base text-text-on-dark/90 mb-8 max-w-md mx-auto">
