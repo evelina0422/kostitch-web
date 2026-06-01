@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, CheckCircle } from 'lucide-react'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
-import SectionHeader from '../components/ui/SectionHeader'
 import Input from '../components/ui/Input'
 import Textarea from '../components/ui/Textarea'
 import Button from '../components/ui/Button'
@@ -123,16 +122,25 @@ export default function Contact() {
       />
       <section className="pt-16 pb-20">
         <Container>
-          <SectionHeader
-            title="Get in Touch"
-            subtitle="Ready to start your project? We're here to help."
-          />
+          <div
+            className="relative overflow-hidden mb-12 bg-cover bg-center min-h-[320px] md:min-h-[420px] flex items-center"
+            style={{ backgroundImage: 'url(/images/contact-hero.png)' }}
+          >
+            <div className="relative px-8 md:px-12 py-12 max-w-md">
+              <h2 className="font-sans text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-light mb-4">
+                Get in Touch
+              </h2>
+              <p className="text-lg md:text-xl text-text-on-light/80">
+                Ready to start your project? We're here to help.
+              </p>
+            </div>
+          </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Info */}
-            <div>
-              <div className="bg-beige rounded-lg p-8 mb-8">
-                <h3 className="text-2xl font-bold text-text-on-light mb-6">Contact Information</h3>
+            <div className="h-full">
+              <div className="bg-beige p-8 h-full">
+                <h3 className="text-xl font-bold text-text-on-light mb-6">Contact Information</h3>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <MapPin className="w-6 h-6 text-accent mr-4 flex-shrink-0 mt-1" />
@@ -163,10 +171,8 @@ export default function Contact() {
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className="bg-beige rounded-lg p-8">
-                <h3 className="text-xl font-bold text-text-on-light mb-4">Business Hours</h3>
+                <h3 className="text-xl font-bold text-text-on-light mb-4 mt-12 pt-8">Business Hours</h3>
                 <div className="space-y-2 text-text-on-light">
                   {siteConfig.businessHours.map((schedule, index) => (
                     <div key={index} className="flex justify-between">
@@ -193,8 +199,8 @@ export default function Contact() {
                   </p>
                 </motion.div>
               ) : (
-                <form onSubmit={handleSubmit(onSubmit)} className="bg-beige border border-border-line rounded-lg p-8">
-                  <h3 className="text-2xl font-bold text-text-on-light mb-6">Quote</h3>
+                <form onSubmit={handleSubmit(onSubmit)} className="bg-beige p-8">
+                  <h3 className="text-xl font-bold text-text-on-light mb-6">Quote</h3>
 
                   <div className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">

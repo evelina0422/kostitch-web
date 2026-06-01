@@ -17,6 +17,7 @@ function Layout() {
   const isPortfolio = pathname === '/portfolio'
   const isServices = pathname === '/capabilities'
   const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
+  const isContact = pathname === '/contact'
 
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
@@ -24,7 +25,7 @@ function Layout() {
       <main className={`flex-grow ${isHome || isAbout ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
         <Outlet />
       </main>
-      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog} />
+      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact} />
     </div>
   )
 }
