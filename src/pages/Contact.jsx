@@ -126,7 +126,7 @@ export default function Contact() {
             className="relative overflow-hidden mb-12 bg-cover bg-center min-h-[320px] md:min-h-[420px] flex items-center"
             style={{ backgroundImage: 'url(/images/contact-hero.png)' }}
           >
-            <div className="relative px-6 sm:px-8 md:px-12 py-8 sm:py-12 max-w-xs sm:max-w-md">
+            <div className="relative px-6 sm:px-8 md:px-12 py-8 sm:py-12 max-w-[10rem] sm:max-w-md">
               <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-light mb-3 sm:mb-4">
                 Get in Touch
               </h2>
