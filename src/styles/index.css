@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @font-face {
+  font-family: MonsieurLaDoulaise;
+  src: url('/fonts/MonsieurLaDoulaise.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: 'Magnolia Script';
   src: url('/fonts/MagnoliaScript.woff2') format('woff2'),
     url('/fonts/MagnoliaScript.woff') format('woff'),
@@ -38,5 +46,9 @@
 @layer components {
   .container-custom {
     @apply max-w-7xl mx-auto px-6 sm:px-12 lg:px-20 xl:px-32;
+  }
+
+  .font-monsieur {
+    font-family: MonsieurLaDoulaise, cursive;
   }
 }
