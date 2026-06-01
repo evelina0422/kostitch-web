@@ -17,7 +17,7 @@ export default function About() {
           src="/images/about-sewing-machine.png"
           alt=""
           aria-hidden="true"
-          className="pointer-events-none select-none absolute inset-y-0 left-1/2 -translate-x-1/2 -z-10 h-full w-full max-w-6xl object-cover object-center"
+          className="pointer-events-none select-none absolute inset-y-0 left-1/2 -translate-x-1/2 -z-10 h-full w-full max-w-5xl object-cover object-center"
         />
       <section className="pt-[11.25rem] pb-20">
         <Container>
@@ -78,25 +78,25 @@ export default function About() {
         </Container>
       </section>
 
-      <section className="bg-[#bd1504] py-8 md:py-12">
+      <section className="bg-[#bd1504] py-2 md:py-3">
         <Container>
-          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10 md:gap-12">
+          <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-4 md:gap-6">
             <div className="w-full md:w-2/5 flex justify-center">
               <img
                 src="/images/philosophy-sewing.jpg"
                 alt="A maker working at a Singer sewing machine"
-                className="w-full max-w-[320px] h-auto rounded-2xl object-cover shadow-xl md:-my-16 md:translate-y-20"
+                className="w-full max-w-[220px] h-auto rounded-2xl object-cover shadow-xl md:-my-4 md:translate-y-6"
               />
             </div>
             <div className="w-full md:w-3/5 text-right">
               <div className="ml-auto max-w-md">
-                <h2 className="font-sans text-xl md:text-2xl font-bold uppercase tracking-widest text-text-on-light mb-6">
+                <h2 className="font-sans text-lg md:text-xl font-bold uppercase tracking-widest text-text-on-light mb-2">
                   {aboutContent.philosophy.title}
                 </h2>
-                <p className="font-sans text-sm md:text-base font-medium uppercase tracking-wide leading-relaxed text-text-on-light">
+                <p className="font-sans text-xs md:text-sm font-medium uppercase tracking-wide leading-snug text-text-on-light">
                   {aboutContent.philosophy.quote}
                 </p>
-                <p className="font-sans text-sm md:text-base font-medium uppercase tracking-wide text-text-on-light mt-2">
+                <p className="font-sans text-xs md:text-sm font-medium uppercase tracking-wide text-text-on-light mt-1">
                   {aboutContent.philosophy.author}
                 </p>
               </div>
@@ -108,9 +108,9 @@ export default function About() {
       <section className="pt-80 pb-80">
         <Container>
           <div className="max-w-4xl mx-auto">
-            <div className="mb-12 max-w-sm md:-ml-16 lg:-ml-24 -mt-16">
-              <h3 className="text-2xl font-bold text-black mb-6">Our Values</h3>
-              <ul className="space-y-4">
+            <div className="mb-12 max-w-xs ml-2 md:ml-4 -mt-40">
+              <h3 className="text-xl font-bold text-black mb-4">Our Values</h3>
+              <ul className="space-y-3">
                 {aboutContent.values.map((value, index) => (
                   <motion.li
                     key={index}
@@ -120,8 +120,8 @@ export default function About() {
                     transition={{delay: index * 0.1, duration: 0.5}}
                     className="flex items-start"
                   >
-                    <Check className="w-6 h-6 text-accent mr-3 flex-shrink-0 mt-1" />
-                    <span className="text-black text-base">{value}</span>
+                    <Check className="w-5 h-5 text-accent mr-2.5 flex-shrink-0 mt-0.5" />
+                    <span className="text-black text-sm leading-relaxed">{value}</span>
                   </motion.li>
                 ))}
               </ul>
