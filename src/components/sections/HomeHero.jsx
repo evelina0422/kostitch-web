@@ -2,6 +2,11 @@ import { Link } from 'react-router-dom'
 import { homeContent } from '../../data'
 import Button from '../ui/Button'
 
+const paperBackground = {
+  backgroundImage: 'url(/images/hero-paper-tile.png?v=2)',
+  backgroundSize: '360px 440px',
+}
+
 function HeroContent({ className = '' }) {
   const { headlineLines, ctaLabel } = homeContent.hero
 
@@ -47,8 +52,13 @@ export default function HomeHero() {
         </div>
       </div>
 
-      <div className="lg:hidden container-custom py-8 sm:py-10 leading-normal">
-        <HeroContent />
+      <div
+        className="lg:hidden w-full bg-cream bg-repeat leading-normal"
+        style={paperBackground}
+      >
+        <div className="container-custom py-8 sm:py-10">
+          <HeroContent />
+        </div>
       </div>
     </section>
   )
