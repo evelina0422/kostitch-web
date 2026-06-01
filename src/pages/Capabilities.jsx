@@ -53,7 +53,7 @@ export default function Capabilities() {
             subtitle={capabilitiesContent.subtitle}
             align="left"
             titleClassName="max-w-sm"
-            titleSizeClassName="text-4xl md:text-5xl lg:text-6xl"
+            titleSizeClassName="text-2xl sm:text-3xl md:text-5xl lg:text-6xl"
             subtitleRedBar
           />
           <div className="flex flex-col md:flex-row gap-x-4 md:gap-x-6 w-fit max-w-full">
