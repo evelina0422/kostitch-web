@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import { CheckCircle, Briefcase, Clock, MapPin } from 'lucide-react'
 import Seo from '../seo/Seo'
 import Container from '../components/layout/Container'
-import SectionHeader from '../components/ui/SectionHeader'
 import Input from '../components/ui/Input'
 import Textarea from '../components/ui/Textarea'
 import Button from '../components/ui/Button'
@@ -25,7 +24,7 @@ const perks = [
   {
     icon: MapPin,
     title: 'Local Team',
-    description: `Join our team in ${siteConfig.address.city}, ${siteConfig.address.state}. No long commutes, just great work close to home.`,
+    description: `Join our team in ${siteConfig.address.city}, ${siteConfig.address.state}. Work alongside a skilled and supportive local team.`,
   },
 ]
 
@@ -126,10 +125,16 @@ export default function Careers() {
       />
       <section className="pt-16 pb-20">
         <Container>
-          <SectionHeader
-            title="Careers at Kostitch"
-            subtitle="Build a rewarding career in garment manufacturing. We're always looking for skilled, motivated people to join our team."
-          />
+          <div className="mb-12 bg-[#c81610] min-h-[320px] md:min-h-[420px] flex items-center">
+            <div className="px-6 sm:px-8 md:px-12 py-8 sm:py-12 max-w-md md:max-w-lg">
+              <h1 className="font-sans text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-text-on-dark mb-3 sm:mb-4">
+                Careers at Kostitch
+              </h1>
+              <p className="text-sm sm:text-lg md:text-xl font-bold uppercase text-text-on-dark/80 leading-relaxed">
+                Build a rewarding career in garment manufacturing. We're always looking for skilled, motivated people to join our team.
+              </p>
+            </div>
+          </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {perks.map((perk, index) => (
@@ -139,7 +144,7 @@ export default function Careers() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="bg-beige rounded-lg p-8 border border-border-line"
+                className="bg-transparent p-8"
               >
                 <perk.icon className="w-10 h-10 text-accent mb-4" />
                 <h3 className="text-xl font-bold text-text-on-light mb-2">{perk.title}</h3>
@@ -153,7 +158,7 @@ export default function Careers() {
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
-                className="bg-beige border-2 border-green-500 rounded-lg p-8 text-center"
+                className="bg-beige border-2 border-green-500 p-8 text-center"
               >
                 <CheckCircle className="w-16 h-16 text-green-600 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-text-on-light mb-2">Application Received!</h3>
@@ -162,9 +167,9 @@ export default function Careers() {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit(onSubmit)} className="bg-beige border border-border-line rounded-lg p-8">
-                <h3 className="text-2xl font-bold text-text-on-light mb-2">Apply Now</h3>
-                <p className="text-text-on-light/70 mb-6">
+              <form onSubmit={handleSubmit(onSubmit)} className="bg-[#6b1816] p-8 text-[#f8f6f1] [&_label]:text-[#f8f6f1] [&_input]:bg-[#f8f6f1] [&_input]:text-text-on-light [&_textarea]:bg-[#f8f6f1] [&_textarea]:text-text-on-light">
+                <h3 className="text-2xl font-bold text-[#f8f6f1] mb-2">Apply Now</h3>
+                <p className="text-[#f8f6f1]/80 mb-6">
                   Tell us about yourself and attach your resume. We'll be in touch.
                 </p>
 
@@ -225,24 +230,24 @@ export default function Careers() {
                   />
 
                   <div>
-                    <label className="block text-sm font-medium text-text-on-light mb-2">
+                    <label className="block text-sm font-medium text-[#f8f6f1] mb-2">
                       Resume / CV
                     </label>
                     <div
                       onDragOver={handleDragOver}
                       onDragLeave={handleDragLeave}
                       onDrop={handleDrop}
-                      className={`border-2 border-dashed rounded-lg p-6 text-center transition-colors ${isDragging
-                        ? 'border-accent bg-accent/5'
-                        : 'border-border-line'
+                      className={`border-2 border-dashed p-6 text-center transition-colors ${isDragging
+                        ? 'border-[#f8f6f1] bg-[#f8f6f1]/10'
+                        : 'border-[#f8f6f1]/40'
                         }`}
                     >
-                      <p className="text-text-on-light/60 text-sm mb-2">
+                      <p className="text-[#f8f6f1]/70 text-sm mb-2">
                         {isDragging
                           ? 'Drop files here...'
                           : 'Drag & drop your resume here, or click to select'}
                       </p>
-                      <p className="text-text-on-light/40 text-xs mb-3">
+                      <p className="text-[#f8f6f1]/50 text-xs mb-3">
                         PDF, JPG, PNG, DOC, DOCX
                       </p>
                       <input
@@ -255,18 +260,18 @@ export default function Careers() {
                       />
                       <label
                         htmlFor="resume-upload"
-                        className="inline-block cursor-pointer bg-beige text-text-on-light px-4 py-2 rounded-lg hover:bg-border-line transition-colors text-sm border border-border-line"
+                        className="inline-block cursor-pointer bg-[#f8f6f1] !text-text-on-light px-4 py-2 rounded-lg hover:bg-white transition-colors text-sm"
                       >
                         Choose Files
                       </label>
                       {selectedFiles.length > 0 && (
                         <div className="mt-4 text-left">
-                          <p className="text-text-on-light/70 text-sm font-semibold mb-2">
+                          <p className="text-[#f8f6f1]/80 text-sm font-semibold mb-2">
                             Selected files ({selectedFiles.length}):
                           </p>
                           <ul className="space-y-1">
                             {selectedFiles.map((file, index) => (
-                              <li key={index} className="text-text-on-light/60 text-xs">
+                              <li key={index} className="text-[#f8f6f1]/70 text-xs">
                                 📎 {file.name} ({(file.size / 1024).toFixed(1)} KB)
                               </li>
                             ))}
