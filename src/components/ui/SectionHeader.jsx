@@ -36,7 +36,7 @@ export default function SectionHeader({
             </div>
           </div>
           <p
-            className={`md:hidden mt-6 text-base sm:text-lg text-text-on-light/70 max-w-3xl ${isLeft ? '' : 'mx-auto'} ${subtitleClassName}`}
+            className={`md:hidden mt-6 text-base sm:text-lg font-bold uppercase text-text-on-light leading-relaxed tracking-wide max-w-3xl ${isLeft ? '' : 'mx-auto'} ${subtitleClassName}`}
           >
             {subtitle}
           </p>
