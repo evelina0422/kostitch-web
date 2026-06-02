@@ -25,9 +25,9 @@ export default function Portfolio() {
                 whileInView={{opacity: 1, scale: 1}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.1, duration: 0.5}}
-                className="bg-beige rounded-lg overflow-hidden border border-border-line hover:shadow-lg transition-all"
+                className="bg-beige overflow-hidden hover:shadow-lg transition-all"
               >
-                <div className="bg-light aspect-[4/3] overflow-hidden border border-border-line">
+                <div className="bg-light aspect-[4/3] overflow-hidden">
                   <img
                     src={item.image}
                     alt={`${item.category} project`}

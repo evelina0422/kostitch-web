@@ -36,7 +36,7 @@ export default function Blog() {
             </h1>
           </div>
           <div className="border-x border-cream bg-[#720e0c] py-12 md:py-16">
-            <div className="text-right mb-10">
+            <div className="text-right mb-24 md:mb-28">
               <p className="text-2xl md:text-3xl font-bold uppercase text-[#f8f6f1]/90 max-w-sm ml-auto mr-6 sm:mr-8 md:mr-10">
                 {blogContent.subtitle}
               </p>

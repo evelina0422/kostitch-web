@@ -91,7 +91,7 @@ export default function HomeProcess() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.08, duration: 0.5}}
-                className="relative flex items-start gap-3 p-4 rounded-xl border border-border-line bg-cream/60 backdrop-blur-sm hover:border-accent hover:shadow-lg transition-all"
+                className="relative flex items-start gap-3 p-4 border border-border-line bg-cream/60 backdrop-blur-sm hover:border-accent hover:shadow-lg transition-all"
               >
                 <div className="relative shrink-0">
                   <div className="w-11 h-11 rounded-full bg-accent/10 border-2 border-accent flex items-center justify-center">

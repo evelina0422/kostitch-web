@@ -13,6 +13,79 @@ function formatDate(dateString) {
   })
 }
 
+function ContentBlock({ block, index }) {
+  switch (block.type) {
+    case 'heading':
+      return (
+        <h2
+          key={index}
+          className="font-sans text-2xl md:text-3xl font-bold text-text-on-light pt-4"
+        >
+          {block.text}
+        </h2>
+      )
+    case 'subheading':
+      return (
+        <h3
+          key={index}
+          className="font-sans text-xl md:text-2xl font-bold text-text-on-light pt-2"
+        >
+          {block.text}
+        </h3>
+      )
+    case 'list':
+      return (
+        <ul
+          key={index}
+          className="list-disc pl-6 space-y-2 text-lg text-text-on-light/80 leading-relaxed"
+        >
+          {block.items.map((item, itemIndex) => (
+            <li key={itemIndex}>{item}</li>
+          ))}
+        </ul>
+      )
+    case 'table':
+      return (
+        <div key={index} className="overflow-x-auto pt-2">
+          <table className="w-full min-w-[640px] text-sm border-collapse border border-border-line">
+            <thead>
+              <tr className="bg-beige">
+                {block.headers.map((header) => (
+                  <th
+                    key={header}
+                    className="border border-border-line px-3 py-2 text-left font-bold text-text-on-light"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, rowIndex) => (
+                <tr key={rowIndex}>
+                  {row.map((cell, cellIndex) => (
+                    <td
+                      key={cellIndex}
+                      className="border border-border-line px-3 py-2 text-text-on-light/80"
+                    >
+                      {cell}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )
+    default:
+      return (
+        <p key={index} className="text-lg text-text-on-light/80 leading-relaxed">
+          {block.text}
+        </p>
+      )
+  }
+}
+
 export default function BlogPost() {
   const { slug } = useParams()
   const post = blogContent.posts.find((p) => p.slug === slug)
@@ -84,20 +157,9 @@ export default function BlogPost() {
 
         <Container className="max-w-3xl">
           <div className="space-y-6">
-            {post.content.map((block, index) =>
-              block.type === 'heading' ? (
-                <h2
-                  key={index}
-                  className="font-sans text-2xl md:text-3xl font-bold text-text-on-light pt-4"
-                >
-                  {block.text}
-                </h2>
-              ) : (
-                <p key={index} className="text-lg text-text-on-light/80 leading-relaxed">
-                  {block.text}
-                </p>
-              )
-            )}
+            {post.content.map((block, index) => (
+              <ContentBlock key={index} block={block} index={index} />
+            ))}
           </div>
         </Container>
       </article>

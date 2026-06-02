@@ -9,6 +9,31 @@ export const homeContent = {
     bannerImage2x: '/images/hero-tan@2x.png?v=4',
     ctaLabel: 'Get a Quote',
   },
+  // Edit `slides` to change which photos appear in the rotating showcase under the hero.
+  showcase: {
+    slides: [
+      {
+        src: '/images/374a99fe5eca8ab4151b545eb265e731.jpg',
+        alt: 'Fashion apparel manufacturing showcase',
+      },
+      {
+        src: '/images/3a8dc00b53e3a6e0011eb5032308102f.jpg',
+        alt: 'Athleisure production showcase',
+      },
+      {
+        src: '/images/3e5e71cd75700f675872a18b7d40cdb5.jpg',
+        alt: 'Private label garment showcase',
+      },
+      {
+        src: '/images/3852cbd16d9930b5700d8cda162a1631.jpg',
+        alt: 'Corporate uniform manufacturing showcase',
+      },
+      {
+        src: '/images/3e61f6b81a70a96f0a8c36b3f0a0b281.jpg',
+        alt: 'Promotional apparel showcase',
+      },
+    ],
+  },
   whyUs: {
     title: 'How We Help',
     images: [

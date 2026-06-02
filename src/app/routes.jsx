@@ -9,6 +9,8 @@ import Contact from '../pages/Contact'
 import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
 import Careers from '../pages/Careers'
+import Industries from '../pages/Industries'
+import Process from '../pages/Process'
 
 function Layout() {
   const { pathname } = useLocation()
@@ -20,6 +22,8 @@ function Layout() {
   const isBlogIndex = pathname === '/blog'
   const isContact = pathname === '/contact'
   const isCareers = pathname === '/careers'
+  const isIndustries = pathname === '/industries'
+  const isProcess = pathname === '/process'
 
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
@@ -27,7 +31,7 @@ function Layout() {
       <main className={`flex-grow ${isHome || isAbout || isBlogIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
         <Outlet />
       </main>
-      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers} />
+      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers && !isIndustries && !isProcess} />
     </div>
   )
 }
@@ -43,6 +47,14 @@ export const router = createBrowserRouter([
       {
         path: '/capabilities',
         element: <Capabilities />,
+      },
+      {
+        path: '/industries',
+        element: <Industries />,
+      },
+      {
+        path: '/process',
+        element: <Process />,
       },
       {
         path: '/portfolio',

@@ -31,7 +31,7 @@ export default function HomeWhyUs() {
                 whileInView={{opacity: 1, y: 0}}
                 viewport={{once: true}}
                 transition={{delay: index * 0.1, duration: 0.5}}
-                className="w-full sm:max-w-none lg:max-w-xs p-4 rounded-lg border border-border-line bg-transparent hover:border-accent hover:shadow-lg transition-all"
+                className="w-full sm:max-w-none lg:max-w-xs p-4 border border-border-line bg-transparent hover:border-accent hover:shadow-lg transition-all"
               >
                 <h3 className="font-sans text-base font-bold uppercase tracking-wide text-text-on-light mb-2">
                   {item.title}
@@ -47,7 +47,7 @@ export default function HomeWhyUs() {
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{delay: 0.1, duration: 0.6}}
-              className="relative w-full overflow-hidden rounded-3xl shadow-lg lg:absolute lg:w-[85%] lg:-top-10 lg:left-0 lg:z-10"
+              className="relative w-full overflow-hidden shadow-lg lg:absolute lg:w-[85%] lg:-top-10 lg:left-0 lg:z-10"
             >
               <img
                 src={images[0].src}
@@ -65,7 +65,7 @@ export default function HomeWhyUs() {
               whileInView={{opacity: 1, y: 0}}
               viewport={{once: true}}
               transition={{delay: 0.25, duration: 0.6}}
-              className="relative w-full overflow-hidden rounded-3xl shadow-lg lg:absolute lg:w-[85%] lg:self-end lg:-bottom-44 lg:-right-8 lg:z-20"
+              className="relative w-full overflow-hidden shadow-lg lg:absolute lg:w-[85%] lg:self-end lg:-bottom-64 lg:-right-16 lg:z-20"
             >
               <img
                 src={images[1].src}
