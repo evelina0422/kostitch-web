@@ -7,12 +7,9 @@ import { siteConfig } from '../../data/siteConfig'
 
 const navLinks = [
   { path: '/capabilities', label: 'Services' },
-  { path: '/industries', label: 'Industries' },
-  { path: '/process', label: 'Process' },
   { path: '/portfolio', label: 'Portfolio' },
   { path: '/blog', label: 'Blog' },
   { path: '/about', label: 'About Us' },
-  { path: '/careers', label: 'Careers' },
 ]
 
 export default function Navbar() {
