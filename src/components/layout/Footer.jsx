@@ -19,13 +19,17 @@ const paperBackground = {
   backgroundSize: '360px 440px',
 }
 
-export default function Footer({ paper = true }) {
+export default function Footer({ paper = true, compactTop = false }) {
   return (
     <footer
       className="bg-cream text-black bg-repeat"
       style={paper ? paperBackground : undefined}
     >
-      <div className="container-custom pt-48 md:pt-64 pb-12 md:pb-16">
+      <div
+        className={`container-custom pb-12 md:pb-16 ${
+          compactTop ? 'border-x border-border-line pt-12 md:pt-16' : 'pt-48 md:pt-64'
+        }`}
+      >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
           <div>

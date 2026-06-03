@@ -20,8 +20,8 @@ export default function Blog() {
         title={blogContent.seo.title}
         description={blogContent.seo.description}
       />
-      <section className="w-full pb-20">
-        <Container>
+      <section className="w-full flex-1 flex flex-col">
+        <Container className="flex-1 flex flex-col">
           <div className="relative border-x border-border-line">
             <img
               src="/images/blog-hero.png"
@@ -35,7 +35,7 @@ export default function Blog() {
               {blogContent.title}
             </h1>
           </div>
-          <div className="border-x border-cream bg-[#720e0c] py-12 md:py-16">
+          <div className="border-x border-cream bg-[#720e0c] flex-1 py-12 md:py-16">
             <div className="text-right mb-24 md:mb-28">
               <p className="text-2xl md:text-3xl font-bold uppercase text-[#f8f6f1]/90 max-w-sm ml-auto mr-6 sm:mr-8 md:mr-10">
                 {blogContent.subtitle}

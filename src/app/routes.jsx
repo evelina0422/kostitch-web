@@ -25,10 +25,15 @@ function Layout() {
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
       <Navbar />
-      <main className={`flex-grow ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
+      <main
+        className={`flex-grow ${isBlogIndex ? 'flex flex-col' : ''} ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}
+      >
         <Outlet />
       </main>
-      <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers} />
+      <Footer
+        paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers}
+        compactTop={isBlogIndex}
+      />
     </div>
   )
 }
