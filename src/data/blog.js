@@ -1,5 +1,6 @@
 import {janitorialUniformFabricPost} from './blogPosts/cost-of-choosing-fabric-janitorial-uniforms'
 import {stainsWorkUniformsPost} from './blogPosts/stains-work-uniforms'
+import {uniformFitEmployeePerformancePost} from './blogPosts/uniform-fit-employee-performance'
 
 export const blogContent = {
   seo: {
@@ -9,6 +10,7 @@ export const blogContent = {
   title: 'Kostitch Journal',
   subtitle: 'Insights on garment manufacturing, production trends, and bringing your apparel vision to life',
   posts: [
+    uniformFitEmployeePerformancePost,
     stainsWorkUniformsPost,
     janitorialUniformFabricPost,
   ],
