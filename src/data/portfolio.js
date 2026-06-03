@@ -1,11 +1,15 @@
 export const portfolioContent = {
+  showComingSoon: true,
   seo: {
     title: 'Our Portfolio - Kostitch',
     description: 'Explore our garment manufacturing portfolio including fashion apparel, corporate uniforms, athleisure, private label, and promotional apparel collections.',
+    comingSoonDescription: 'Our portfolio is coming soon. Contact Kostitch to learn about our garment manufacturing work and discuss your project.',
   },
   title: 'Our Portfolio',
   subtitle: 'Showcasing quality craftsmanship across diverse projects',
-  heroImage: '/images/portfolio-hero.png',
+  comingSoonMessage:
+    "We're putting the finishing touches on our portfolio. Check back soon to explore our latest projects, or reach out if you'd like to discuss your next collection.",
+  heroImage: '/images/portfolio-hero.png?v=2',
   items: [
     {
       category: 'Fashion Apparel',
