@@ -18,13 +18,14 @@ function Layout() {
   const isServices = pathname === '/capabilities'
   const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
   const isBlogIndex = pathname === '/blog'
+  const isPortfolioIndex = pathname === '/portfolio'
   const isContact = pathname === '/contact'
   const isCareers = pathname === '/careers'
 
   return (
     <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
       <Navbar />
-      <main className={`flex-grow ${isHome || isAbout || isBlogIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
+      <main className={`flex-grow ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}>
         <Outlet />
       </main>
       <Footer paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers} />

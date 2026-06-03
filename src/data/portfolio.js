@@ -5,6 +5,7 @@ export const portfolioContent = {
   },
   title: 'Our Portfolio',
   subtitle: 'Showcasing quality craftsmanship across diverse projects',
+  heroImage: '/images/portfolio-hero.png',
   items: [
     {
       category: 'Fashion Apparel',

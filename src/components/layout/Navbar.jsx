@@ -53,9 +53,14 @@ export default function Navbar() {
 
   const isAbout = location.pathname === '/about'
   const isBlogIndex = location.pathname === '/blog'
-  const hasHeroNav = isAbout || isBlogIndex
-  const showSolidNav = hasHeroNav ? isOpen : isScrolled || isOpen
-  const lightText = !showSolidNav && hasHeroNav
+  const isPortfolioIndex = location.pathname === '/portfolio'
+  const hasHeroNav = isAbout || isBlogIndex || isPortfolioIndex
+  const showSolidNav = isPortfolioIndex
+    ? isScrolled || isOpen
+    : hasHeroNav
+      ? isOpen
+      : isScrolled || isOpen
+  const lightText = !showSolidNav && (isAbout || isBlogIndex)
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
