@@ -26,9 +26,7 @@ export default function Footer({ paper = true, compactTop = false }) {
       style={paper ? paperBackground : undefined}
     >
       <div
-        className={`container-custom pb-12 md:pb-16 ${
-          compactTop ? 'border-x border-border-line pt-12 md:pt-16' : 'pt-48 md:pt-64'
-        }`}
+        className={`container-custom pb-12 md:pb-16 ${compactTop ? 'pt-12 md:pt-16' : 'pt-48 md:pt-64'}`}
       >
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           {/* Company Info */}
