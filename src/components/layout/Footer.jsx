@@ -73,6 +73,20 @@ export default function Footer({ paper = true }) {
             </ul>
           </div>
 
+          {/* Business Hours */}
+          <div>
+            <h4 className="text-black font-semibold mb-4">Business Hours</h4>
+            <ul className="space-y-2 text-sm">
+              {siteConfig.businessHours.map(({ days, hours }) => (
+                <li key={days}>
+                  <span className="font-medium">{days}</span>
+                  <br />
+                  <span className="text-black/80">{hours}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Social & CTA */}
           <div className="lg:col-start-4">
             <h4 className="text-black font-semibold mb-4">Connect</h4>
