@@ -9,6 +9,16 @@ export const homeContent = {
     bannerImage2x: '/images/hero-tan@2x.png?v=4',
     ctaLabel: 'Get a Quote',
   },
+  intro: {
+    title: 'Made Local. Made to Last.',
+    body: 'Kostitch was built on a simple belief — that the people who keep our community running deserve workwear made with real care. Based in Orlando, Florida, we manufacture professional uniforms and garments for businesses of all sizes, from small local shops to growing companies across every industry. This is where our story starts, and we want yours to be part of it.',
+    badge: 'Made in USA',
+    badgeSecondary: 'Orlando-Based',
+    image: {
+      src: '/images/home-intro-workshop.png',
+      alt: 'Craftsperson working at an industrial sewing machine in the Kostitch workshop',
+    },
+  },
   // Edit `slides` to change which photos appear in the rotating showcase under the hero.
   showcase: {
     slides: [
