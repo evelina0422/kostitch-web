@@ -17,6 +17,26 @@ export const homeContent = {
     secondaryCtaLabel: 'View our work',
     secondaryCtaPath: '/portfolio',
   },
+  heroStats: {
+    items: [
+      {
+        title: '48hr',
+        description: 'Sample turnaround',
+      },
+      {
+        title: '50 units',
+        description: 'Low MOQ to get started',
+      },
+      {
+        title: 'End-to-end',
+        description: 'Sample through to delivery',
+      },
+      {
+        title: 'Included',
+        description: 'Fabric sourcing on every order',
+      },
+    ],
+  },
   intro: {
     title: 'Made Local. Made to Last.',
     body: 'Kostitch was built on a simple belief — that the people who keep our community running deserve workwear made with real care. Based in Orlando, Florida, we manufacture professional uniforms and garments for businesses of all sizes, from small local shops to growing companies across every industry. This is where our story starts, and we want yours to be part of it.',
