@@ -2,11 +2,6 @@ import { Link } from 'react-router-dom'
 import { homeContent } from '../../data'
 import Button from '../ui/Button'
 
-const paperBackground = {
-  backgroundImage: 'url(/images/hero-paper-tile.png?v=2)',
-  backgroundSize: '360px 440px',
-}
-
 function getHeadlineText(line) {
   return typeof line === 'string' ? line : line.text
 }
@@ -52,7 +47,7 @@ export default function HomeHero() {
   const { bannerImage, bannerImage2x, headlineLines } = homeContent.hero
 
   return (
-    <section className="relative w-full bg-cream leading-[0] pt-20 lg:pt-0">
+    <section className="relative w-full leading-[0] max-lg:pt-20 lg:pt-0 lg:bg-cream">
       <div className="relative overflow-hidden">
         <img
           src={bannerImage}
@@ -72,10 +67,7 @@ export default function HomeHero() {
         </div>
       </div>
 
-      <div
-        className="lg:hidden w-full bg-cream bg-repeat leading-normal"
-        style={paperBackground}
-      >
+      <div className="lg:hidden w-full leading-normal">
         <div className="container-custom py-8 sm:py-10">
           <HeroContent />
         </div>

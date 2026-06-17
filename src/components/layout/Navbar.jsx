@@ -51,10 +51,11 @@ export default function Navbar() {
     setIsOpen(false)
   }, [location])
 
+  const isHome = location.pathname === '/'
   const isAbout = location.pathname === '/about'
   const isBlogIndex = location.pathname === '/blog'
   const isPortfolioIndex = location.pathname === '/portfolio'
-  const hasHeroNav = isAbout || isBlogIndex || isPortfolioIndex
+  const hasHeroNav = isHome || isAbout || isBlogIndex || isPortfolioIndex
   const showSolidNav = isPortfolioIndex
     ? isScrolled || isOpen
     : hasHeroNav

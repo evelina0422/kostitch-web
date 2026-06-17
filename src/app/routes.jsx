@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import {createBrowserRouter, Outlet, useLocation} from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
@@ -10,8 +11,18 @@ import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
 import Careers from '../pages/Careers'
 
+const paperBackground = {
+  backgroundImage: 'url(/images/hero-paper-tile.png?v=2)',
+  backgroundSize: '360px 440px',
+}
+
 function Layout() {
   const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'auto'})
+  }, [pathname])
+
   const isHome = pathname === '/'
   const isAbout = pathname === '/about'
   const isPortfolio = pathname === '/portfolio'
@@ -23,10 +34,13 @@ function Layout() {
   const isCareers = pathname === '/careers'
 
   return (
-    <div className={`min-h-screen flex flex-col ${isHome ? 'bg-cream' : ''}`}>
+    <div
+      className={`min-h-screen flex flex-col ${isHome ? 'bg-cream bg-repeat' : ''}`}
+      style={isHome ? paperBackground : undefined}
+    >
       <Navbar />
       <main
-        className={`flex-grow ${isBlogIndex ? 'flex flex-col' : ''} ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}${isHome ? ' bg-cream' : ''}`}
+        className={`flex-grow ${isBlogIndex ? 'flex flex-col' : ''} ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}`}
       >
         <Outlet />
       </main>

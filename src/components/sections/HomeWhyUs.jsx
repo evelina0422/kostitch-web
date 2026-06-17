@@ -58,11 +58,11 @@ export default function HomeWhyUs() {
                   whileInView={{opacity: 1, y: 0}}
                   viewport={{once: true}}
                   transition={{delay: (index % 3) * 0.08, duration: 0.5}}
-                  className="group border-t border-l border-border-line p-6 sm:p-8 hover:bg-cream transition-colors"
+                  className="border-t border-l border-border-line p-6 sm:p-8"
                 >
                   {Icon && (
                     <Icon
-                      className="w-7 h-7 text-text-on-light/80 group-hover:text-accent transition-colors mb-6"
+                      className="w-7 h-7 text-text-on-light/80 mb-6"
                       strokeWidth={1.6}
                     />
                   )}
