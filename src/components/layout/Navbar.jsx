@@ -26,18 +26,11 @@ export default function Navbar() {
       // Update background on scroll
       setIsScrolled(currentScrollY > 20)
 
-      // Determine scroll direction and visibility
-      if (currentScrollY < lastScrollY) {
-        // Scrolling up - show navbar
-        setIsVisible(true)
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past threshold - hide navbar
-        setIsVisible(false)
-      }
-
-      // Always show navbar at the top
+      // Show navbar only at the top; hide when scrolling down past threshold
       if (currentScrollY < 10) {
         setIsVisible(true)
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false)
       }
 
       setLastScrollY(currentScrollY)
