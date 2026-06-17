@@ -1,6 +1,7 @@
 import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
+import {Ruler, PenTool, ShieldCheck, Layers, Wrench, MessageCircle} from 'lucide-react'
 import Container from '../layout/Container'
-import SectionHeader from '../ui/SectionHeader'
 import {homeContent} from '../../data'
 
 const paperBackground = {
@@ -8,75 +9,72 @@ const paperBackground = {
   backgroundSize: '360px 440px',
 }
 
+const iconMap = {
+  pattern: Ruler,
+  design: PenTool,
+  quality: ShieldCheck,
+  production: Layers,
+  modifications: Wrench,
+  communication: MessageCircle,
+}
+
 export default function HomeWhyUs() {
-  const {title, items, images} = homeContent.whyUs
+  const {eyebrow, title, linkLabel, linkPath, items} = homeContent.whyUs
 
   return (
-    <section className="pt-16 sm:pt-24 lg:pt-[36rem] pb-16 sm:pb-24 lg:pb-[32rem] bg-cream bg-repeat" style={paperBackground}>
+    <section className="pt-0 pb-16 sm:pb-24 lg:pb-40 bg-cream bg-repeat" style={paperBackground}>
       <Container>
-        <SectionHeader
-          title={title}
-          align="left"
-          titleSizeClassName="text-2xl md:text-3xl lg:text-4xl"
-          titleClassName="uppercase tracking-wide"
-          className="mb-8 lg:mb-12"
-        />
-
-        <div className="grid lg:grid-cols-[1fr_360px] xl:grid-cols-[1fr_420px] gap-10 lg:gap-6 items-start">
-          <div className="order-2 lg:order-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-y-4 gap-x-4 lg:gap-y-4 lg:gap-x-1 lg:pl-16">
-            {items.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{opacity: 0, y: 20}}
-                whileInView={{opacity: 1, y: 0}}
-                viewport={{once: true}}
-                transition={{delay: index * 0.1, duration: 0.5}}
-                className="w-full sm:max-w-none lg:max-w-xs p-4 border border-border-line bg-transparent hover:border-accent hover:shadow-lg transition-all"
-              >
-                <h3 className="font-sans text-base font-bold uppercase tracking-wide text-text-on-light mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-text-on-light/70 leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
+        <div className="flex flex-wrap items-end justify-between gap-x-6 gap-y-4 mb-8 lg:mb-12">
+          <div>
+            {eyebrow && (
+              <p className="text-xs font-bold uppercase tracking-[0.2em] text-text-on-light/50 mb-3">
+                {eyebrow}
+              </p>
+            )}
+            <h2 className="font-sans text-2xl md:text-3xl lg:text-4xl font-bold leading-[1.1] tracking-wide uppercase text-text-on-light">
+              {title}
+            </h2>
           </div>
 
-          <div className="order-1 lg:order-2 relative mx-auto w-full max-w-[360px] sm:max-w-[400px] xl:max-w-[420px] flex flex-col gap-8 lg:block lg:min-h-[520px] lg:-mt-44">
-            <motion.div
-              initial={{opacity: 0, y: 16}}
-              whileInView={{opacity: 1, y: 0}}
-              viewport={{once: true}}
-              transition={{delay: 0.1, duration: 0.6}}
-              className="relative w-full overflow-hidden shadow-lg lg:absolute lg:w-[85%] lg:-top-10 lg:left-0 lg:z-10"
+          {linkLabel && linkPath && (
+            <Link
+              to={linkPath}
+              className="text-sm font-semibold text-text-on-light underline underline-offset-4 decoration-text-on-light/30 hover:decoration-accent hover:text-accent transition-colors"
             >
-              <img
-                src={images[0].src}
-                alt={images[0].alt}
-                width={819}
-                height={1024}
-                className="w-full aspect-[4/5] object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </motion.div>
+              {linkLabel}
+            </Link>
+          )}
+        </div>
 
-            <motion.div
-              initial={{opacity: 0, y: 16}}
-              whileInView={{opacity: 1, y: 0}}
-              viewport={{once: true}}
-              transition={{delay: 0.25, duration: 0.6}}
-              className="relative w-full overflow-hidden shadow-lg lg:absolute lg:w-[85%] lg:self-end lg:-bottom-64 lg:-right-16 lg:z-20"
-            >
-              <img
-                src={images[1].src}
-                alt={images[1].alt}
-                width={819}
-                height={1024}
-                className="w-full aspect-[4/5] object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-            </motion.div>
+        <div className="border border-border-line bg-cream/40">
+          <div className="-m-px grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item, index) => {
+              const Icon = iconMap[item.icon]
+
+              return (
+                <motion.div
+                  key={item.title}
+                  initial={{opacity: 0, y: 20}}
+                  whileInView={{opacity: 1, y: 0}}
+                  viewport={{once: true}}
+                  transition={{delay: (index % 3) * 0.08, duration: 0.5}}
+                  className="group border-t border-l border-border-line p-6 sm:p-8 hover:bg-cream transition-colors"
+                >
+                  {Icon && (
+                    <Icon
+                      className="w-7 h-7 text-text-on-light/80 group-hover:text-accent transition-colors mb-6"
+                      strokeWidth={1.6}
+                    />
+                  )}
+                  <h3 className="font-sans text-lg font-bold text-text-on-light mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-text-on-light/65 leading-relaxed">
+                    {item.description}
+                  </p>
+                </motion.div>
+              )
+            })}
           </div>
         </div>
       </Container>

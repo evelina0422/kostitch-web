@@ -4,10 +4,18 @@ export const homeContent = {
     description: 'Professional garment manufacturing services from concept to delivery. Cut & sew, sampling, bulk production, and quality control for fashion brands worldwide.',
   },
   hero: {
-    headlineLines: ['Custom Sewing', 'for Every Industry'],
+    headlineLines: [
+      'Precision-crafted',
+      'for brands that',
+      {text: 'demand more', italic: true},
+    ],
+    subtext:
+      'From sample to scale, we manufacture garments to exacting standards — with full transparency at every step of production.',
     bannerImage: '/images/hero-tan.png?v=4',
     bannerImage2x: '/images/hero-tan@2x.png?v=4',
-    ctaLabel: 'Get a Quote',
+    ctaLabel: 'Start your project',
+    secondaryCtaLabel: 'View our work',
+    secondaryCtaPath: '/portfolio',
   },
   intro: {
     title: 'Made Local. Made to Last.',
@@ -45,41 +53,66 @@ export const homeContent = {
     ],
   },
   whyUs: {
+    eyebrow: 'What we do',
     title: 'How We Help',
-    images: [
-      {
-        src: '/images/how-we-help-1.png',
-        alt: 'Craftsperson working at an industrial sewing machine in the Kostitch workshop',
-      },
-      {
-        src: '/images/how-we-help-2.png',
-        alt: 'Close-up of hands operating a Singer industrial sewing machine',
-      },
-    ],
+    linkLabel: 'See all services',
+    linkPath: '/capabilities',
     items: [
       {
-        title: 'CUSTOM PATTERN DEVELOPMENT',
-        description: 'Transform ideas into production-ready patterns.',
+        icon: 'pattern',
+        title: 'Custom pattern development',
+        description: 'Transform ideas into production-ready patterns built for clean, repeatable manufacturing.',
       },
       {
-        title: 'DESIGN SUPPORT',
-        description: 'Refine concepts, technical details, and specifications.',
+        icon: 'design',
+        title: 'Design support',
+        description: 'Refine concepts, technical details, and specifications before anything goes into production.',
       },
       {
-        title: 'Quality Assurance',
-        description: 'Carefully inspected for quality at every stage',
+        icon: 'quality',
+        title: 'Quality assurance',
+        description: 'Every garment is carefully inspected for quality at each stage of production.',
       },
       {
-        title: 'Flexible Production',
-        description: 'Scalable capacity to match your growth.',
+        icon: 'production',
+        title: 'Flexible production',
+        description: 'Scalable capacity that matches your growth, from first samples to full runs.',
       },
       {
-        title: 'Functional Modifications',
+        icon: 'modifications',
+        title: 'Functional modifications',
         description: 'Industry-specific features, reinforcements, and performance upgrades.',
       },
       {
-        title: 'Transparent Communication',
-        description: 'Real-time updates, clear timelines, and responsive support throughout your project lifecycle.',
+        icon: 'communication',
+        title: 'Transparent communication',
+        description: 'Real-time updates, clear timelines, and responsive support throughout your project.',
+      },
+    ],
+  },
+  howItWorks: {
+    eyebrow: 'How it works',
+    title: 'From brief to production',
+    steps: [
+      {
+        title: 'Submit your brief',
+        description:
+          "Share your design files, reference garments, or even a rough sketch. We'll take it from there.",
+      },
+      {
+        title: 'Sample & approve',
+        description:
+          'We produce a physical sample for your sign-off before any bulk production begins.',
+      },
+      {
+        title: 'Production',
+        description:
+          'Full-scale manufacturing with QC checkpoints throughout, keeping you updated at every stage.',
+      },
+      {
+        title: 'Ship & deliver',
+        description:
+          'Packed, labeled, and shipped directly to your warehouse or fulfillment center — ready for your next step.',
       },
     ],
   },
