@@ -6,7 +6,7 @@ import { siteConfig } from '../../data/siteConfig'
 const footerLinks = {
   company: [
     { path: '/about', label: 'About Us' },
-    { path: '/capabilities', label: 'Services' },
+    { path: '/services', label: 'Services' },
     { path: '/repairs', label: 'Tailor & Repairs' },
     { path: '/portfolio', label: 'Portfolio' },
     { path: '/blog', label: 'Blog' },

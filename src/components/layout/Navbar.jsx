@@ -6,7 +6,7 @@ import Button from '../ui/Button'
 import { siteConfig } from '../../data/siteConfig'
 
 const navLinks = [
-  { path: '/capabilities', label: 'Services' },
+  { path: '/services', label: 'Services' },
   { path: '/repairs', label: 'Tailor & Repairs' },
   { path: '/portfolio', label: 'Portfolio' },
   { path: '/blog', label: 'Blog' },

@@ -84,7 +84,7 @@ export const homeContent = {
     eyebrow: 'What we do',
     title: 'How We Help',
     linkLabel: 'See all services',
-    linkPath: '/capabilities',
+    linkPath: '/services',
     items: [
       {
         icon: 'pattern',

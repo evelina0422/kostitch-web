@@ -1,5 +1,5 @@
 import {useEffect} from 'react'
-import {createBrowserRouter, Outlet, useLocation} from 'react-router-dom'
+import {createBrowserRouter, Navigate, Outlet, useLocation} from 'react-router-dom'
 import Navbar from '../components/layout/Navbar'
 import Footer from '../components/layout/Footer'
 import Home from '../pages/Home'
@@ -27,7 +27,7 @@ function Layout() {
   const isHome = pathname === '/'
   const isAbout = pathname === '/about'
   const isPortfolio = pathname === '/portfolio'
-  const isServices = pathname === '/capabilities'
+  const isServices = pathname === '/services'
   const isBlog = pathname === '/blog' || pathname.startsWith('/blog/')
   const isBlogIndex = pathname === '/blog'
   const isPortfolioIndex = pathname === '/portfolio'
@@ -63,8 +63,12 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: '/capabilities',
+        path: '/services',
         element: <Capabilities />,
+      },
+      {
+        path: '/capabilities',
+        element: <Navigate to="/services" replace />,
       },
       {
         path: '/portfolio',
