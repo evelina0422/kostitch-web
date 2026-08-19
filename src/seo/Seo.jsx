@@ -44,6 +44,18 @@ export default function Seo({title, description, ogImage}) {
       meta.content = ogImage
       document.head.appendChild(meta)
     }
+
+    if (ogImage) {
+      const twitterImage = document.querySelector('meta[name="twitter:image"]')
+      if (twitterImage) {
+        twitterImage.setAttribute('content', ogImage)
+      } else {
+        const meta = document.createElement('meta')
+        meta.name = 'twitter:image'
+        meta.content = ogImage
+        document.head.appendChild(meta)
+      }
+    }
   }, [title, description, ogImage])
 
   return null

@@ -91,7 +91,7 @@ export default function HomeIntro() {
   const {title, body, badge, badgeSecondary, image} = homeContent.intro
 
   return (
-    <section className="pt-32 md:pt-40 lg:pt-48 pb-32 sm:pb-48 lg:pb-64 bg-cream bg-repeat" style={paperBackground}>
+    <section className="pt-16 md:pt-24 lg:pt-32 pb-32 sm:pb-48 lg:pb-64 bg-cream bg-repeat" style={paperBackground}>
       <Container>
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
           <motion.div

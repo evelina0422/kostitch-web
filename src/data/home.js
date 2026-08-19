@@ -2,15 +2,15 @@ export const homeContent = {
   seo: {
     title: 'Kostitch - Premium Garment Manufacturing for Global Brands',
     description: 'Professional garment manufacturing services from concept to delivery. Cut & sew, sampling, bulk production, and quality control for fashion brands worldwide.',
+    ogImage: '/images/hero-tan@2x.png',
   },
   hero: {
     headlineLines: [
-      'Precision-crafted',
-      'for brands that',
-      {text: 'demand more', italic: true},
+      'Crafted to last.',
+      'Mended to last longer.',
     ],
     subtext:
-      'From sample to scale, we manufacture garments to exacting standards — with full transparency at every step of production.',
+      'From a first sample to a full production run — or a single garment that deserves another decade. Same workshop, same standards, full transparency at every step.',
     bannerImage: '/images/hero-tan.png?v=4',
     bannerImage2x: '/images/hero-tan@2x.png?v=4',
     ctaLabel: 'Start your project',
@@ -20,26 +20,34 @@ export const homeContent = {
   heroStats: {
     items: [
       {
-        title: '48hr',
-        description: 'Sample turnaround',
+        title: 'Brands & individuals',
+        description: "One workshop, whether it's 500 units or one jacket",
       },
       {
-        title: '50 units',
-        description: 'Low MOQ to get started',
+        title: '48hr',
+        description: 'Samples and repair quotes, turned around fast',
       },
       {
         title: 'End-to-end',
-        description: 'Sample through to delivery',
+        description: 'Design and alterations through to delivery',
       },
       {
         title: 'Included',
-        description: 'Fabric sourcing on every order',
+        description: 'Fabric sourcing and matching on every order',
       },
     ],
   },
+  repairsTeaser: {
+    eyebrow: 'Already own the piece?',
+    title: 'Repairs & Tailoring',
+    body:
+      "Alterations, refits, replacement linings, invisible mending — handled by the same team that builds our production runs. Send a photo and we'll quote it within 48 hours.",
+    linkLabel: 'Repairs & Tailoring',
+    linkPath: '/repairs',
+  },
   intro: {
     title: 'Made Local. Made to Last.',
-    body: 'Kostitch was built on a simple belief — that the people who keep our community running deserve workwear made with real care. Based in Orlando, Florida, we manufacture professional uniforms and garments for businesses of all sizes, from small local shops to growing companies across every industry. This is where our story starts, and we want yours to be part of it.',
+    body: "Kameron is the top designer in Orlando — a designer first, whatever the garment. He patterns every piece himself and checks every detail alongside the team he's trusted for years, because quality is more than durability: a piece should hold its shape, its stitch and its line, and still look sharp on the hundredth wear. That's the standard behind every order we send out.",
     badge: 'Made in USA',
     badgeSecondary: 'Orlando-Based',
     image: {

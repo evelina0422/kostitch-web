@@ -10,6 +10,7 @@ import Contact from '../pages/Contact'
 import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
 import Careers from '../pages/Careers'
+import Repairs from '../pages/Repairs'
 
 const paperBackground = {
   backgroundImage: 'url(/images/hero-paper-tile.png?v=2)',
@@ -32,6 +33,7 @@ function Layout() {
   const isPortfolioIndex = pathname === '/portfolio'
   const isContact = pathname === '/contact'
   const isCareers = pathname === '/careers'
+  const isRepairs = pathname === '/repairs'
 
   return (
     <div
@@ -45,7 +47,7 @@ function Layout() {
         <Outlet />
       </main>
       <Footer
-        paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers}
+        paper={!isAbout && !isPortfolio && !isServices && !isBlog && !isContact && !isCareers && !isRepairs}
         compactTop={isBlogIndex}
       />
     </div>
@@ -83,6 +85,10 @@ export const router = createBrowserRouter([
       {
         path: '/careers',
         element: <Careers />,
+      },
+      {
+        path: '/repairs',
+        element: <Repairs />,
       },
       {
         path: '/contact',

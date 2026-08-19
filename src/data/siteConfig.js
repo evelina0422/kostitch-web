@@ -1,4 +1,5 @@
 export const siteConfig = {
+  siteUrl: 'https://kostitch.com',
   companyName: 'Kostitch',
   tagline: 'Premium Garment Manufacturing',
   email: 'info@kostitch.com',

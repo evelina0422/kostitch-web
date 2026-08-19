@@ -7,6 +7,7 @@ const footerLinks = {
   company: [
     { path: '/about', label: 'About Us' },
     { path: '/capabilities', label: 'Services' },
+    { path: '/repairs', label: 'Tailor & Repairs' },
     { path: '/portfolio', label: 'Portfolio' },
     { path: '/blog', label: 'Blog' },
     { path: '/careers', label: 'Careers' },

@@ -7,6 +7,7 @@ import { siteConfig } from '../../data/siteConfig'
 
 const navLinks = [
   { path: '/capabilities', label: 'Services' },
+  { path: '/repairs', label: 'Tailor & Repairs' },
   { path: '/portfolio', label: 'Portfolio' },
   { path: '/blog', label: 'Blog' },
   { path: '/about', label: 'About Us' },
@@ -57,7 +58,7 @@ export default function Navbar() {
   const lightText = !showSolidNav && (isAbout || isBlogIndex)
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
+    <nav className={`fixed top-0 left-0 right-0 z-50 pt-2 lg:pt-3 transition-all duration-300 ${showSolidNav ? 'bg-[#f8f6f1] shadow-md' : 'bg-transparent'
       } ${isVisible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-20 lg:h-28">
@@ -66,12 +67,12 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center space-x-10">
+          <div className="hidden lg:flex items-center space-x-7 xl:space-x-10">
             {navLinks.map((link) => (
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-lg font-medium transition-colors ${location.pathname === link.path
+                className={`text-lg font-medium whitespace-nowrap transition-colors ${location.pathname === link.path
                   ? 'text-accent'
                   : lightText
                     ? 'text-white hover:text-accent'
