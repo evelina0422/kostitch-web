@@ -5,6 +5,7 @@ export const capabilitiesContent = {
   },
   title: 'Our Manufacturing Services',
   subtitle: 'From design to delivery, we offer end-to-end garment manufacturing services',
+  heroImage: '/images/services-hero.png',
   items: [
     {
       title: 'Cut & Sew',

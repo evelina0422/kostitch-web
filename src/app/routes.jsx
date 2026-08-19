@@ -42,7 +42,7 @@ function Layout() {
     >
       <Navbar />
       <main
-        className={`flex-grow ${isBlogIndex ? 'flex flex-col' : ''} ${isHome || isAbout || isBlogIndex || isPortfolioIndex ? '' : 'pt-20'}`}
+        className={`flex-grow ${isBlogIndex ? 'flex flex-col' : ''} ${isHome || isAbout || isBlogIndex || isPortfolioIndex || isServices ? '' : 'pt-20'}`}
       >
         <Outlet />
       </main>
