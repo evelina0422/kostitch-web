@@ -49,7 +49,7 @@ export const homeContent = {
     title: 'Made Local. Made to Last.',
     body: "Kameron is the top designer in Orlando — a designer first, whatever the garment. He patterns every piece himself and checks every detail alongside the team he's trusted for years, because quality is more than durability: a piece should hold its shape, its stitch and its line, and still look sharp on the hundredth wear. That's the standard behind every order we send out.",
     badge: 'Made in USA',
-    badgeSecondary: 'Orlando-Based',
+    badgeSecondary: 'Central Florida Based',
     image: {
       src: '/images/home-intro-workshop.png',
       alt: 'Craftsperson working at an industrial sewing machine in the Kostitch workshop',

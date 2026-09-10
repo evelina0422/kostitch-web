@@ -223,7 +223,7 @@ export default function Repairs() {
               <div className="bg-[#720e0c] p-8 h-full text-[#f8f6f1]">
                 <h3 className="text-xl font-bold text-[#f8f6f1] mb-4">Visit the workshop</h3>
                 <p className="text-[#f8f6f1]/80 mb-8 leading-relaxed">
-                  Drop garments off at our Orlando shop during business hours, or send a request and we’ll follow up with next steps.
+                  Drop garments off at our {siteConfig.address.city} shop during business hours, or send a request and we’ll follow up with next steps.
                 </p>
                 <div className="space-y-6">
                   <div className="flex items-start">

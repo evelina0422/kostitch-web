@@ -2,12 +2,12 @@ export const repairsContent = {
   seo: {
     title: 'Tailor & Repairs - Kostitch',
     description:
-      'Professional clothing alterations and repairs in Orlando. Hemming, fittings, zipper replacement, and garment restoration from the Kostitch workshop.',
+      'Professional clothing alterations and repairs in Altamonte Springs. Hemming, fittings, zipper replacement, and garment restoration from the Kostitch workshop.',
   },
   title: 'Tailor & Repairs',
   subtitle: 'Expert alterations and clothing repairs, finished with the same craft we put into every garment we make.',
   intro:
-    'Need a better fit, a new hem, or a favorite piece brought back to life? Our Orlando workshop handles tailoring and repairs for everyday clothing, uniforms, and workwear — with the precision of a manufacturing floor.',
+    'Need a better fit, a new hem, or a favorite piece brought back to life? Our Altamonte Springs workshop handles tailoring and repairs for everyday clothing, uniforms, and workwear — with the precision of a manufacturing floor.',
   services: [
     {
       group: 'Alterations',
@@ -63,7 +63,7 @@ export const repairsContent = {
   steps: [
     {
       title: 'Tell us what you need',
-      description: 'Send photos and a short description, or bring the garment by our Orlando workshop.',
+      description: 'Send photos and a short description, or bring the garment by our Altamonte Springs workshop.',
     },
     {
       title: 'We inspect and quote',

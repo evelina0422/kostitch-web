@@ -5,10 +5,10 @@ export const siteConfig = {
   email: 'info@kostitch.com',
   phone: '(407) 759-3721',
   address: {
-    street: '2507 Investors Row, Unit H5',
-    city: 'Orlando',
+    street: '580 Cape Cod Ln, Suite 4',
+    city: 'Altamonte Springs',
     state: 'FL',
-    zip: '32837',
+    zip: '32714',
     country: 'USA',
   },
   social: {

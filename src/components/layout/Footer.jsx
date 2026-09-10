@@ -44,7 +44,7 @@ export default function Footer({ paper = true, compactTop = false }) {
               <div className="flex items-start">
                 <MapPin className="w-4 h-4 mt-1 mr-2 flex-shrink-0" />
                 <span>
-                  {siteConfig.address.street}, {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
+                  {siteConfig.address.street} {siteConfig.address.city}, {siteConfig.address.state} {siteConfig.address.zip}
                 </span>
               </div>
               <div className="flex items-center">

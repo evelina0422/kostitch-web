@@ -28,7 +28,7 @@ function IntroBadge({label, icon}) {
   return (
     <div className="inline-flex flex-col items-center gap-1.5">
       {icon}
-      <span className="text-xs font-bold uppercase tracking-widest text-text-on-light text-center whitespace-nowrap">
+      <span className="text-xs font-bold uppercase tracking-widest text-text-on-light text-center leading-tight max-w-[11rem]">
         {label}
       </span>
     </div>

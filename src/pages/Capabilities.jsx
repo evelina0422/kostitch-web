@@ -45,7 +45,7 @@ export default function Capabilities() {
         title={seo.title}
         description={seo.description}
       />
-      <section className="pb-20">
+      <section>
         <div className="pt-[5.5rem] lg:pt-[7.75rem] pb-8 md:pb-10">
           <div className="relative">
             <div className="relative w-full overflow-hidden aspect-[2.35/1] min-h-[18rem] sm:min-h-[22rem] xl:min-h-[28rem] 2xl:min-h-[34rem]">
@@ -87,7 +87,8 @@ export default function Capabilities() {
             </div>
           </div>
         </div>
-        <Container>
+        <div className="pb-20">
+          <Container>
           <div className="flex flex-col md:flex-row gap-x-4 md:gap-x-6 w-fit max-w-full">
             <div className="flex flex-col gap-12 md:gap-16">
               {leftColumn.map((capability) => (
@@ -109,6 +110,7 @@ export default function Capabilities() {
             </div>
           </div>
         </Container>
+        </div>
       </section>
     </>
   )
