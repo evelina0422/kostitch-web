@@ -21,15 +21,11 @@ export const siteConfig = {
   },
   businessHours: [
     {
-      days: 'Monday - Friday',
-      hours: '9:00 AM - 6:00 PM',
+      days: 'Tuesday - Saturday',
+      hours: '10:00 AM - 5:00 PM',
     },
     {
-      days: 'Saturday',
-      hours: '10:00 AM - 4:00 PM',
-    },
-    {
-      days: 'Sunday',
+      days: 'Sunday - Monday',
       hours: 'Closed',
     },
   ],
