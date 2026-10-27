@@ -22,7 +22,7 @@ export const siteConfig = {
   businessHours: [
     {
       days: 'Tuesday - Saturday',
-      hours: '10:00 AM - 5:00 PM',
+      hours: '10:00 AM - 6:00 PM',
     },
     {
       days: 'Sunday - Monday',
